@@ -24,8 +24,7 @@ ResizeFont       "-*-terminus-*-r-normal-*-20-*-*-*-*-*-*-*"
 WorkSpaceFont	 "-*-terminus-*-r-normal-*-20-*-*-*-*-*-*-*"
 
 #---------------------------------------------------------
-# PIXMAP CONFIG and
-# PIXMAPS
+# PIXMAP CONFIG and PIXMAPS
 #---------------------------------------------------------
 
 PixmapDirectory          "/usr/share/pixmaps/"	# dir. for xpms
@@ -35,15 +34,14 @@ Pixmaps
 }
 
 #---------------------------------------------------------
-# COLOR CONFIG and
-# COLORS                                          
+# COLOR CONFIG and COLORS                                          
 #---------------------------------------------------------
 
 #BeNiceToColorMap			# less col in shadows
 
 Color
 {
-  BorderColor           "#FFB600" {
+BorderColor           "#FFB600" {
 "Pale Moon" "#445334"
 "Brave" "#FF6800"
 "Waterfox" "#88AFFF"
@@ -113,32 +111,6 @@ TransientOnTop				# Put transients top when they appear
 
 IconifyStyle		"sweep"
 
-#OpaqueMove				# want to see the window?
-#{
-#}
-#NoOpaqueMove				# When OpaqueMove is set, use
-#{					# NoOpaqueMove on these wins
-#}
-
-#OpaqueMoveThreshold {35}		# ..but only less than XX%
-#OpaqueResize				# see everthing when you resize
-#{					# optional winlist
-#}
-#NoOpaqueResize				# ... or only the frames?
-#{					# optional winlist
-#    "Netscape"
-#}
-#OpaqueResizeThreshold {35}		# ..but only less than XX%
-
-#AutoOccupy				# change occupation automat. (?)
-#AutoRelativeResize			# intelligent resizing => easier
-
-#NoGrabServer				# no grab server on popup/opaque (?)
-
-#NoRaiseOnWarp				# when should I raise a win?
-#NoRaiseOnMove				#  /\
-#NoRaiseOnResize				#  ||
-
 WarpRingOnScreen			# only warp on current workspace # Enable Alt+Tab type window circulation
 WarpUnmapped				# deiconfity unmapped and warp
 
@@ -149,7 +121,6 @@ ConstrainedMoveTime       0		# How quick to 2click to constrain
 XMoveGrid 64
 YMoveGrid 32
 
-
 MoveDelta                 3		# dist. 4 move 2 work
 AnimationSpeed            12		# update speed for animated things
 ClearShadowContrast       50		# clear shadow for 3D
@@ -157,41 +128,23 @@ DarkShadowContrast        50		# dark shadow for 3D
 MovePackResistance        44		# how many pix. res. be4 overlap?
 
 MaxWindowSize		  "5760x1080" # default
-#RaiseDelay               10		# how long delay raise?
+
 
 NoStackMode				# ignore stacking reqs from clients
-#{					# optional winlist
+#{
 #}
 
-#PackNewWindows				# use f.movepack, not f.move, 4 new
-#OpenWindowTimeout	90		# autoclose if not attended (see man)
-RaiseWhenAutoUnSqueeze			
-
-#XorValue				# coloring when not using Opaque
-#Zoom			8		# show iconification
+RaiseWhenAutoUnSqueeze
 
 #---------------------------------------------------------
-# TITLEBAR CONFIG and
-# TITLEBAR BUTTONS                                          
+# TITLEBAR CONFIG and BUTTONS                                          
 #---------------------------------------------------------
 
 UseThreeDTitles
 NoDefaults				# not use default buttons
 
-#NoTitleHighlight			
+#SqueezeTitle				# shrinks titlebar # BeOS Style or "Normal"
 #{					# optional winlist
-#}
-
-#SunkFocusWindowTitle			# sink instead of raise?
-#NoTitleFocus				# keyboard input at pointer
-#UseSunkTitlePixmap			# sink instead of raise?
-
-#SqueezeTitle				# shrinks titlebar # BeOS Style or Windows Style
-#{					# optional winlist
-#}
-
-#DontSqueezeTitle			# Don't squeeze title for these wins.
-#{					# If used w/o list, no titles squeeze
 #}
 
 Button1 = m1 : title : f.movetitlebar # BeOS style title drag
@@ -229,41 +182,11 @@ ThreeDBorderWidth         2
 Borderwidth               2
 BorderShadowDepth         0
 
-#ClientBorderWidth			# Allow apps to set own BWidth
-
 #---------------------------------------------------------
-# WORKSPACE MANAGER CONFIG and
-# WORKSPACE COLORS AND NAMES                              
+# WORKSPACE MANAGER CONFIG COLORS AND NAMES                              
 # N = "Name"  |  MC = "ManagerColor"  |  MTC = "ManTextColor" 
 # BC = "BackgroundColor"  |  FC = "ForegroundColor"  |  RX = "RootXpm" 
 #---------------------------------------------------------
-
-DontPaintRootWindow			# repaint root(below) or not?
-#ShowWorkSpaceManager			# activate/deactivate WSM
-
-ReallyMoveInWorkspaceManager            # Move windows from WSM?
-#AlwaysShowWindowWhenMovingFromWorkspaceManager   # Mirror moves i WSM in
-
-#MapWindowCurrentWorkSpace   		# appearance of current WS
-#{  border_color  [background] [fore- ground] [bitmap] }
-
-#MapWindowDefaultWorkSpace  		# appearance of default WS
-#{  border_color  [background] [fore- ground] [bitmap] }
-
-
-UseThreeDWMap
-
-DontWarpCursorInWMap			# no move to indicated win
-NoShowOccupyAll				# don't show'em in WSM
-ReverseCurrentWorkspace		# reverse colors in curr WS?
-StartInMapState				# buttons or maps?
-
-WMgrHorizButtonIndent     0		# /dist. between buttons
-WMgrVertButtonIndent      0		# \when in button mode
-
-WorkSpaceManagerGeometry  "400x200-0-0 2 2"
-
-#WMgrButtonShadowDepth    1
 
 WorkSpaces 
 {
@@ -277,64 +200,7 @@ WorkSpaces
 }
 
 #---------------------------------------------------------
-# ICON CONFIG and
-# ICONS
-#---------------------------------------------------------
-
-#ForceIcons				# use icons put below, not default
-#{
-#}
-
-IconifyByUnmapping			# no icon when iconified
-#NoRaiseOnDeiconify			# raise deiconified wins?
-#AutoRaiseIcons				# raise icons when under cursor
-
-IconDirectory            "/usr/include/X11/bitmaps"
-IconJustification         "left"	# where put image/title?
-MaxIconTitleWidth         220
-IconBorderWidth          1             # frame around I?
-#UnknownIcon		  ""		# bitmap to use for unknown?
-
-ShrinkIconTitles			# shrink icon titles a'la Motif
-
-# Where on the screen to put icons and how to place them.
-IconRegion                "140x684+140+0" North East 160 90  { }
-#IconRegionAlignement     "bottom"
-IconRegionJustification  "left"
-
-Icons
-{
-#   "emacs"        "xpm:edit1.xpm"
-}
-
-#---------------------------------------------------------
-# ICON MANAGER CONFIG
-#---------------------------------------------------------
-
-#ShowIconManager				# activate/deactivate IM
-#NoIconManagers				# activate/deactivate IM
-UseThreeDIconManagers
-SortIconManager				# sorts alphabetically
-#NoCaseSensitive			# sort with case?
-#NoIconTitle				# don't put title under icons
-#{					# optional winlist
-#}
-IconManagerShadowDepth    0
-#NoIconManagerFocus			# !focus the win under cursor in IM
-
-# Icon Manager Geometry:  Size:       Columns:
-IconManagerGeometry       "120x40-1+0" 1
-
-#application segregated icon managers
-#IconManagers
-#{
-#	"sakura"		"=73x40-1+200" 1
-#}
-
-
-#---------------------------------------------------------
-# MOUSE POINTER CONFIG and   (cursor = mouse pointer)
-# MOUSE POINTERS
+# MOUSE POINTER CONFIG and MOUSE POINTERS (cursor = mouse pointer)
 #---------------------------------------------------------
 
 BorderResizeCursors			# resize curs on border
@@ -355,21 +221,10 @@ Cursors
 }
 
 #---------------------------------------------------------
-# MENU CONFIG and
-# MENUS                                           
-#
-# Tip for menus:
-# Instead of rewriting your menus for every platform you
-# move your .ctwmrc-file to, you could keep all menus in
-# the same file and simply add a couple of lines to the
-# mouse button funcion specifications below. Here I have
-# one set of menus for DEC and one for Linux. Study my
-# example! :)
+# MENU CONFIG and MENUS                                           
 #---------------------------------------------------------
 
 StayUpMenus				# pin automatically?
-#WarpToDefaultMenuEntry			# warp to menu (when using above)
-
 UseThreeDMenus				# 3D or not?
 MenuShadowDepth           1		# how big shadow? (1 looks good)
 NoMenuShadows				# do U want shadows?
@@ -554,91 +409,9 @@ menu "configs"
 	"CTWM"					f.menu "CTWM"
 }
 
-menu "windows"
-{
-    "  Windows"      f.title
-    "  Pin Menu"     f.pin
-     ""            f.separator
-    "  Kill"         f.menu "Kill"
-    "  Save"         f.saveyourself
-    "  Refresh All"  f.refresh
-    "  Refresh"      f.winrefresh
-    "  Occupy"       f.occupy
-    "  Occupy All"   f.occupyall
-    "  Vanish"       f.vanish
-    "  Iconify"      f.iconify
-    "  Resize"       f.resize
-    "  RaiseLower"   f.raiselower
-    "  Move"         f.move
-    "  Raise"        f.raise
-    "  Lower"        f.lower
-    "  Info"         f.identify
-    "  Focus"        f.focus
-    "  Unfocus"      f.unfocus
-    "  Animation         "    f.menu "Anim"
-    "  Zoom"         f.menu "Zoom"
-}
-
-menu "titleops"
-{
-    "Title Bar"    f.title
-    "RaiseLower"   f.raiselower
-    "Iconify"      f.iconify
-    "Info"         f.identify
-    "Focus"        f.focus
-    "Unfocus"      f.unfocus
-    "Refresh"      f.winrefresh
-    "Occupy"       f.occupy
-    "Occupy All"   f.occupyall
-    "Vanish"       f.vanish
-    ""             f.separator
-    "Send Delete"  f.delete
-    "Kill Window"  f.destroy
-    "Zoom"         f.menu "Zoom"
-}
-
-menu "Kill"
-{
-    "Pin menu"     f.pin
-    "Kill Window"  f.destroy
-    "Send Delete"  f.delete
-}
-
-menu "Zoom" {
-    "Full"       f.fullzoom
-    "Horizontal" f.horizoom
-    "Vertical"   f.zoom
-    "Left"       f.leftzoom
-    "Top"        f.topzoom
-    "Right"      f.rightzoom
-    "Bottom"     f.bottomzoom
-}
-
-menu "Anim" {
-    "Start"       f.startanimation
-    "Stop"        f.stopanimation
-    "Faster"      f.speedupanimation
-    "Slower"      f.slowdownanimation
-}
-
-menu "TMenu" 
-{
-    "Title Menu" f.title
-    "Iconify"    f.iconify
-    "Move"       f.move
-    "Raise"      f.raise
-    ""           f.separator
-    "Occupy all" f.occupyall
-    "Unoccupy"	 f.occupy 
-}
-
 #---------------------------------------------------------
 # WM DISPLAY CONFIGURATION                              
 #---------------------------------------------------------
-
-#IconManagerShow			# If IconManagerDontShow is set
-#{					# only these windows will be shown
-#}
 
 ForceFocus
 {
@@ -693,56 +466,7 @@ OnTopPriority 0 {
 }
 
 NoTitle 
-#{					# optional winlist              
-#	"brave"
-#	"spacefm"
-#	"palemoon"
-#	"geany"
-#	"tor"
-#   "TWM Icon Manager"
-#  "WorkSpaceManager"
-#   "Occupy Window"
-#}
-
-#StartIconified 
-#{ 
-#  "XQuit"  
-#  "Povray" 
-#  "Netscape Download"
-#  "XMMS*"
-#}
-
-DontIconifyByUnmapping			# These wins will turn into icons
-{					# even if you use an Icon Manager
-   "xlogo"
-   "wmxmms"
-   "TWM Icon Manager"
-   "WorkSpaceManager"
-   "xload"
-   "xclock"
-   "flexbuttonz"
-}
-
-#StartSqueezed				# start these in squeezed state
 #{
-#}
-
-#AutoSqueeze				# Auto Squeeze/Unsqueeze these wins
-#{
-#	"WorkSpaceManager"
-#}
-
-#UnmapByMovingFarAway			# Don't unmap these when you go
-#{					# to another WS
-#}
-
-#DontSetInactive			# Don't make these wins inactive
-#{					# when you go to other WS. (FrameM)
-#}
-
-#AutoRaise
-#{
-#	"WorkSpaceManager"
 #}
 
 NoBorder
@@ -785,13 +509,6 @@ Occupy # always move this app. to the same workspace?
 
 WindowRing 				# which windows to use when warping
 #{					# if you don't list any windows  
-#   "brave*"
-#   "spacefm*"
-#   "pcmanfm*"
-#   "sakura*"
-#   "geany*"
-#   "audacious*"
-#   "mousepad*"
 #}
 
 WindowRingExclude			# Don't include these windows i warp
@@ -802,28 +519,13 @@ WindowRingExclude			# Don't include these windows i warp
 	"WorkSpaceManager"
 }
 
-#MakeTitle				# When NoTitle is set, make titlebars
-#{					# on these specific windows
-#}		
-
-#WarpCursor				# warp to deiconified wins
-#{					# optional winlist
-#}
 DontWarpCursorInWMap
 
 #---------------------------------------------------------
 # FUNCTION DEFINITIONS                                   
 #---------------------------------------------------------
 
-Function "move-or-raiselower"  { f.move f.deltastop f.raiselower }
-Function "move-or-lower"       { f.move f.deltastop f.lower }
-Function "move-or-raise"       { f.move f.deltastop f.raise }
 Function "raise-and-resize"    { f.raise f.deltastop f.resize }
-Function "move-or-iconify"     { f.move f.deltastop f.iconify }
-Function "move-or-flip"        { f.move f.deltastop f.raiselower }
-Function "raise-n-focus"       { f.raise f.focus}
-Function "raise-move"          { f.raise f.deltastop f.move }
-Function "blob"                { f.deiconify f.raise f.focus f.lower }
 Function "ws-move-vanish1"                { f.toggleoccupation "workspace1" f.vanish }
 Function "ws-move-vanish2"                { f.toggleoccupation "workspace2" f.vanish }
 Function "ws-move-vanish3"                { f.toggleoccupation "workspace3" f.vanish }
@@ -847,7 +549,6 @@ Button1 =	: f		: f.function "raise-and-resize"
 # KEYS	= Altkey: CONTEXT	: FUNCTION
 #---------------------------------------------------------
 
-#IgnoreLockModifier		# use same bindings regardless of locks
 # Escape
 "0xff1b" = c|m : all : !"xkill"
 
@@ -866,62 +567,43 @@ Button1 =	: f		: f.function "raise-and-resize"
 "6" = c|s : w : f.function "ws-move-vanish6"
 "0" = c|s : w : f.occupy
 
-
 "0xff61"       = mod3 : all         : !"$HOME/Documents/Scripts/pillar/screenshot.sh sa&"
 "0xff61"       = c : all         : !"$HOME/Documents/Scripts/pillar/screenshot.sh&"
 "0xff61"       = c|mod4 : all         : !"$HOME/Documents/Scripts/pillar/screenshot.sh sw&"
 "E"     = mod4 : all : !"$HOME/Scripts/pillar/xy_launch.sh e &"
 "Delete"     = c|m : all : !"gnome-system-monitor&"
 "R"     = mod4 : all : !"launcher&"
-
-#space 0x20 65
 "0x20"     = mod4 : all : !"$HOME/Scripts/pillar/space_runner.sh run&"
 "R"     = mod4 : all : !"$HOME/Scripts/pillar/space_runner.sh run&"
 "L"     = mod4 : all : !"slock&"
 "T"     = c|m : all         : !"$HOME/Scripts/pillar/xy_launch.sh t&"
 "M"     = c|m : all         : !"$HOME/Scripts/pillar/xy_launch.sh m&"
-#"W"     = mod4 : all : !"winlist cw&"
 "W"     = mod4 : all : !"rofi -show window&"
-#f.iconify
 "D"    = mod4 : all : f.showbackground
 "0xff1b" = c : w : f.deleteordestroy # close window
-#"V" = c|s : all : !"$HOME/Scripts/pillar/space_runner.sh cb&"
 "V" = c|s : all : !"clipmenu&"
 "F9" = m | c | s : all : f.restart
-#"R" = m : w : f.resize
-
 "Tab"      = m	: all		: f.warpring "next"
 "Tab"      = m|s	: all		: f.warpring "prev"
-
-
 "Right"    = mod4	: w		: f.jumpright "6"
 "Left"     = mod4 : w		: f.jumpleft "6"
 "Up"       = mod4 : w		: f.jumpup "6"
 "Down"     = mod4 : w		: f.jumpdown "6"
-
 "Right"    = c	: w		: !"$HOME/Scripts/pillar/maximize.sh right&"
 "Left"     = c	: w		: !"$HOME/Scripts/pillar/maximize.sh left&"
 "Up"       = c  : w		: !"$HOME/Scripts/pillar/maximize.sh top&"
 "Down"     = c  : w		: !"$HOME/Scripts/pillar/maximize.sh bottom&"
 
-#"F1"     = m|s : all : f.changesize "640x540"
 "F1"     = m|s : all : !"$HOME/Scripts/pillar/maximize.sh small&"
-#"F2"     = m|s : all : f.changesize "1280x1080"
 "F2"     = m|s : all : !"$HOME/Scripts/pillar/maximize.sh large&"
 "F3"     = m|s : all : !"$HOME/Scripts/pillar/maximize.sh tsr&"
 "F11"     = : w : f.fullscreenzoom
-#"M"     = m : w : f.iconify
 "B"     = m : w : f.raiselower
-#!"$HOME/Scripts/pillar/maximize.sh max&"
 "X"     = m : w : !"$HOME/Scripts/pillar/maximize.sh max&"
 "C"     = m : w : !"$HOME/Scripts/pillar/maximize.sh cust&"
 "X"    =      mod4 : w : f.raiselower
-#"F11"     = : w : f.changesize "1920x1080"
 "F12"   =      c : all   : f.fullzoom
-#"F11"   =       : all   : f.fullscreenzoom
 "F10" = : "sakura" : f.raise
-#"F10" = c : w : f.setpriority "1"
-#"F10" = m : w : f.setpriority "0"
 "F10" = mod3 : w : !"$HOME/Scripts/pillar/aot.sh&"
 
 #SloppyFocus
@@ -936,10 +618,4 @@ SaveWorkspaceFocus      # Obviously workspace focus should be retained
 
 IgnoreCaseInMenuSelection # Make menus much easier via keyboard
 ShortAllWindowsMenus    # Don't show iconmgr and workspace mgr in lists # Don't show IM and WSM in win.menu
-
-#LeftTitleButton ":menu" = f.menu "windowops" # Window menu button
-#RightTitleButton ":xlogo" = f.delete         # Window close button
-#LeftTitleButton            ":xpm:dot"           = f.iconify
-#RightTitleButton           ":xpm:kill"         = f.delete
-
 
