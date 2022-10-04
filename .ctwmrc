@@ -1,0 +1,620 @@
+#---------------------------------------------------------
+# EMERGENCY
+# This line is here so that U will be able 2 restart CTWM
+# even if the rest of the file doesn't work very well!
+#---------------------------------------------------------
+
+"F6"= s : r|w|t|m|f : f.twmrc  #shift "L2": source .ctwmrc
+
+#---------------------------------------------------------      
+# FONTS                                                 
+#---------------------------------------------------------
+#-*-fira sans-medium-r-*-*-*-*-*-*-*-*-*-*
+#"-adobe-helvetica-bold-r-normal--16*"
+#-*-fira sans-medium-r-*-*-17-*-100-100-*-*-ascii-*
+
+MenuFont 	"-adobe-helvetica-medium-r-*-*-16-*-*-*-*-*-*-*"
+#MenuFont    "-misc-fixed-medium-r-*-*-22-*-*-*-*-*-*-*"
+#MenuFont         "-*-terminus-*-r-normal-*-28-240-72-72-*-120-*-*"
+#MenuFont         "-misc-fira sans-*-r-*-*-14-*-100-100-*-*-ascii-*"
+TitleFont        "-*-terminus-*-r-normal-*-20-*-*-*-*-*-*-*"
+IconManagerFont  "-*-terminus-*-r-normal-*-20-*-*-*-*-*-*-*"
+IconFont		 "-*-terminus-*-r-normal-*-20-*-*-*-*-*-*-*"
+ResizeFont       "-*-terminus-*-r-normal-*-20-*-*-*-*-*-*-*"
+WorkSpaceFont	 "-*-terminus-*-r-normal-*-20-*-*-*-*-*-*-*"
+
+#---------------------------------------------------------
+# PIXMAP CONFIG and PIXMAPS
+#---------------------------------------------------------
+
+PixmapDirectory          "/usr/share/pixmaps/"	# dir. for xpms
+
+Pixmaps
+{
+}
+
+#---------------------------------------------------------
+# COLOR CONFIG and COLORS                                          
+#---------------------------------------------------------
+
+#BeNiceToColorMap			# less col in shadows
+
+Color
+{
+BorderColor           "#FFB600" {
+"Pale Moon" "#445334"
+"Brave" "#FF6800"
+"Waterfox" "#88AFFF"
+"librewolf" "#AAAAAA"
+#"sakura" "#FFFF00"
+"VirtualBox" "#6868FF"
+"fsearch" "#00FF00"
+"klogg" "#AA00FF"
+"audacious" "#FF8800"
+"gnome-system-monitor" "#FF0000"
+}
+  DefaultBackground     "#242424"
+  DefaultForeground     "#CACACA"
+  TitleBackground       "#FFB600"
+  TitleForeground       "#000000" 
+  BorderTileBackground  "#2F2F2F"		# optional windowlist
+  MenuBackground        "#121212"
+  MenuForeground        "#FFB600"
+  MenuTitleBackground   "black"
+  MenuTitleForeground   "white"
+  MenuShadowColor       "black"			# default is black
+  IconBackground        "#FFB600"
+  IconForeground        "green"
+  IconBorderColor       "black"
+  IconManagerBackground "#121212"
+  IconManagerForeground "#888888"
+  IconManagerHighlight  "#FFB600"
+  MapWindowBackground   "black"			# BGcol for WSMwins
+  MapWindowForeground   "#FFB600"			# FGcol for WSMwins
+}
+
+SaveColor					# tell client about these
+{						# settings to "smooth"
+     BorderColor
+     TitleBackground
+     TitleForeground
+}
+
+
+#---------------------------------------------------------
+# MONOCHROME "COLOR"-SETTINGS
+#---------------------------------------------------------
+
+Monochrome
+{
+	BorderColor 		"black"
+	BorderTileForeground 	"black"
+	BorderTileBackground 	"white"
+	TitleForeground 	"black"
+	TitleBackground 	"white"
+	MenuTitleForeground 	"black"
+	MenuTitleBackground 	"white"
+	MapWindowForeground 	"white"
+	MapWindowBackground 	"white"
+}
+
+#---------------------------------------------------------
+# GENERAL CTWM CONFIG                                         
+#---------------------------------------------------------
+
+RestartPreviousState			# use previous if any
+CenterFeedbackWindow			# move pos.info to center
+
+DecorateTransients			# give transients TB
+TransientHasOccupation			# ..uhh? Try it! What is it?
+TransientOnTop				# Put transients top when they appear 
+
+IconifyStyle		"sweep"
+
+WarpRingOnScreen			# only warp on current workspace # Enable Alt+Tab type window circulation
+WarpUnmapped				# deiconfity unmapped and warp
+
+DontMoveOff				# Add below & U get resistance
+MoveOffResistance	  "-1"		# ahow hard must I push?
+
+ConstrainedMoveTime       0		# How quick to 2click to constrain
+XMoveGrid 64
+YMoveGrid 32
+
+MoveDelta                 3		# dist. 4 move 2 work
+AnimationSpeed            12		# update speed for animated things
+ClearShadowContrast       50		# clear shadow for 3D
+DarkShadowContrast        50		# dark shadow for 3D
+MovePackResistance        44		# how many pix. res. be4 overlap?
+
+MaxWindowSize		  "5760x1080" # default
+
+
+NoStackMode				# ignore stacking reqs from clients
+#{
+#}
+
+RaiseWhenAutoUnSqueeze
+
+#---------------------------------------------------------
+# TITLEBAR CONFIG and BUTTONS                                          
+#---------------------------------------------------------
+
+UseThreeDTitles
+NoDefaults				# not use default buttons
+
+#SqueezeTitle				# shrinks titlebar # BeOS Style or "Normal"
+#{					# optional winlist
+#}
+
+Button1 = m1 : title : f.movetitlebar # BeOS style title drag
+
+TitleButtonShadowDepth    0
+TitleShadowDepth          0
+TitleButtonBorderWidth    0
+TitlePadding              0		# frame around TBobjects?
+ButtonIndent              0		# indentated TBbuttons?		
+FramePadding		  0		# frame around TB?
+TitleJustification        "left"	# right/left/center
+
+
+#RightTitleButton           "xpm:resize.xpm"    = f.resize
+RightTitleButton           "xpm:verexp.xpm"    = f.zoom
+#RightTitleButton           "xpm:horexp.xpm"    = f.hzoom
+
+#---------------------------------------------------------
+# Sounds
+#---------------------------------------------------------
+
+#RplaySounds
+#{
+#"KeyPress" "$HOME/Desktop/test.wav"
+#"FocusIn" "$HOME/Desktop/test.wav"
+#}
+
+
+#---------------------------------------------------------
+# BORDER CONFIG
+#---------------------------------------------------------
+
+UseThreeDBorders
+ThreeDBorderWidth         2
+Borderwidth               2
+BorderShadowDepth         0
+
+#---------------------------------------------------------
+# WORKSPACE MANAGER CONFIG COLORS AND NAMES                              
+# N = "Name"  |  MC = "ManagerColor"  |  MTC = "ManTextColor" 
+# BC = "BackgroundColor"  |  FC = "ForegroundColor"  |  RX = "RootXpm" 
+#---------------------------------------------------------
+
+WorkSpaces 
+{
+#    N          MC        MTC       BC       FC    RX 
+    "workspace1"    { "#FF00FF" "#BEBABE" "#080808" "white"} # "xpm:bg/gnome-bg.xpm"}
+    "workspace2"    { "#000000" "#BEBABE" "#222600" "white"} # "xpm:bg/gnome-bg.xpm"}
+    "workspace3"    { "#000000" "#BEBABE" "#282600" "white"} # "xpm:bg/gnome-bg.xpm"}
+    "workspace4"    { "#000000" "#BEBABE" "#FFB600" "white"} # "xpm:bg/gnome-bg.xpm"}
+    "workspace5"    { "#000000" "#BEBABE" "#FF0000" "white"} # "xpm:bg/gnome-bg.xpm"}
+    "workspace6"    { "#000000" "#BEBABE" "#FFFFFF" "white"} # "xpm:bg/gnome-bg.xpm"}
+}
+
+#---------------------------------------------------------
+# MOUSE POINTER CONFIG and MOUSE POINTERS (cursor = mouse pointer)
+#---------------------------------------------------------
+
+BorderResizeCursors			# resize curs on border
+
+Cursors
+{	
+    Destroy     "pirate"
+    Frame       "top_left_arrow"
+    Title       "top_left_arrow"
+    Icon        "top_left_arrow"
+    IconMgr     "top_left_arrow"
+    Move        "fleur"
+    Resize      "fleur"
+    Menu        "sb_left_arrow"
+    Button      "hand2"
+    Wait        "watch"
+    Select      "dot"
+}
+
+#---------------------------------------------------------
+# MENU CONFIG and MENUS                                           
+#---------------------------------------------------------
+
+StayUpMenus				# pin automatically?
+UseThreeDMenus				# 3D or not?
+MenuShadowDepth           1		# how big shadow? (1 looks good)
+NoMenuShadows				# do U want shadows?
+NoBackingStore				# /which is faster,
+#NoSaveUnders				# \try them out!
+InterpolateMenuColors			# interpolate colors in multicol menus
+
+menu "Menus"
+{
+"Applications"				("#000000":"#FFB600")f.title
+"Terminal"					!"sakura&"
+""							f.separator
+"Games"						f.menu "games"
+"Documents"					f.menu "doc"
+"Development"				f.menu "dev"
+"Audio"						f.menu "audio"
+"Visual"					f.menu "video-image"
+"Utilities"					f.menu "utils"
+"Networking"				f.menu "network"
+"System"					f.menu "system"
+}
+
+menu "games"
+{
+	"0 A.D."				!"0ad&"
+#	"Arma 3"				!"steam skip steam://rungameid/107410&"
+	"Beyond All Reason"		!"DISPLAY=:0.0 $HOME/Games/Beyond-All-Reason-1.1522.0.AppImage&"
+	"Brigador"				!"$HOME/Games/Brigador\\ Up\\ Armored\\ Edition/start.sh&"
+#	"Cataclysm: DDA"		!"sakura -x cataclysm&"
+	"COD MW 1"				!"cod1.sh&"
+	"COD MW 2"				!"cod2.sh&"
+	"COD MW 3"				!"cod3.sh&"
+	"DosBox"				!"dosbox&"
+#	"FRICK Inc."			!"DISPLAY=:0.0 $HOME/Games/FrickInc/frickInc.x86_64&"
+#	"GemCraft - Chasing Shadows" !"steam skip steam://rungameid/296490&"
+#	"GemCraft - Frostborn Wrath" !"steam skip steam://rungameid/1106530&"
+#	"GROUND BRANCH"			!"steam skip steam://rungameid/16900&"
+#	"Hedgewars"				!"hedgewars&"
+#	"Minetest"				!"minetest&"
+	"MorroWind"				!"openmw-launcher&"
+	"Netherguild"			("red":"blue")!"$HOME/Games/Netherguild/Netherguild&"
+	"Never Winter Nights 2"	("white":"#616aa1")!"$HOME/Games/Neverwinter\\ Nights\\ 2\\ Complete/nwn2.sh&"
+	"Oblivion"				("#FFB600":"#121212")!"env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/1&"
+#	"Orcs Must Die! 2"		!"steam skip steam://rungameid/201790&"
+#	"Orcs Must Die!"		!"steam skip steam://rungameid/102600&"
+	"Pingus"				("#FFB600":"#121212")!"pingus&"
+	"Project Zomboid"		("white":"#000012")!"$HOME/Games/Project\\ Zomboid/start.sh&"
+	"Quake 2"				("#FFB600":"#121212")!"$HOME/Games/Quake\\ II/q2.sh&"
+#	"Ravenfield"			!"steam skip steam://rungameid/636480&"
+	"ReVolt"				("white":"#460000")!"$HOME/Games/rvgl/rvgl.64&"
+	"SandStorm"				("#FFB600":"#121212")!"$HOME/Scripts/pillar/launchers/StartSandstorm.sh&"
+	"Sargosian Abyss"		("black":"red")!"$HOME/Games/SargosianAbyss/The\\ Sargosian\\ Abyss.sh&"
+	"Shattered Pixel Dungeon"	("#FFB600":"#121212")!"$HOME/Games/Shattered\\ Pixel\\ Dungeon/start.sh&"
+	"Steam"					("white":"#1b2838")!"steam&"
+	"Tarkov"				("#CC00FF":"#000012")!"$HOME/Scripts/pillar/launchers/StartTarkov.sh&"
+#	"TeeWorlds"				!"teeworlds&"
+#	"The Dark Mod"			!"$HOME/Games/TheDarkMod/thedarkmod.x64&"
+#	"The Long Dark"			!"steam skip steam://rungameid/305620&"
+	"Tower Of Time"			("#FFB600":"#121212")!"$HOME/Games/Tower\\ of\\ Time/start.sh&"
+#	"Ur-Quan Masters"		!"uqm&"
+	"Veloren"				("#FFB600":"#121212")!"$HOME/.local/share/airshipper/airshipper&"
+	"WarCraft II"			("#FFB600":"#121212")!"$HOME/Games/Warcraft\\ II/drive_c/GOG Games/Warcraft\\ II\\ BNE/wc2.sh&"
+	"WarCraft III"			("#FFB600":"#121212")!"$HOME/Games/Warcraft\\ III/wc3.sh&"
+	"Xenonauts"				("#FFB600":"#121212")!"$HOME/Games/Xenonauts/start.sh&"
+	"Zorbus"				("white":"#4b5463")!"cd $HOME/Games/Zorbus ; DISPLAY=:0.0 wine $HOME/Games/Zorbus/Zorbus.exe&"
+}
+
+menu "utils"
+{
+	"Color Picker"			!"gcolor3&"
+	"Calculator"			!"galculator&"
+	"MELD"					!"meld&"
+	"Roccat"				!"roccatkonextdopticalconfig&"
+	"RegEx Testing"			!"/usr/bin/com.github.artemanufrij.regextester&"
+	"PeaZip"				!"peazip&"
+	"SpaceFM"				!"spacefm&"
+	"PCmanFM"				!"pcmanfm&"
+	"Leafpad"				!"leafpad&"
+	"Featherpad"			!"featherpad&"	
+	"NeoVIM"				!"nvim %F&"
+	"Keepassxc"				!"keepassxc&"
+	"eDex"					!"/opt/edex-ui/eDEX-UI.AppImage&"
+}
+
+menu "CTWM"
+{
+"Animation"					f.menu "Anim"
+"Restart"					f.twmrc
+""							f.separator
+"Quit"					f.quit
+}
+
+menu "doc"
+{
+	"Libre Office"			!"libreoffice&"
+	"Leafpad"				!"leafpad&"
+	"KLogg"					!"klogg&"
+#	"FBReader"				!"FBReader&"
+#	"Foliate"				!"foliate&"
+	"CoolReader"			!"cr3&"
+	"NeoVIM"				!"nvim %F&"
+	"Geany"					!"geany.sh&"
+}
+
+menu "dev"
+{
+	"Geany"					!"geany.sh&"
+	"Godot"					!"godot&"
+	"NeoVIM"				!"nvim %F&"
+	"Unity"					!"unity&"
+	"SimulIDE"				!"simulide&"
+	"ArduinoIDE"			!"$HOME/.local/share/bin/arduino-ide_2.0.0_Linux_64bit.AppImage&"
+}
+
+menu "system"
+{
+	"Baobab"				!"env GTK_THEME=Adwaita:dark baobab&"
+	"FS-Lint"				!"fslint-gui&"	
+	"Stacer"				!"Stacer-1.1.0-x64.AppImage&"	
+	"Mime-Editor"			!"env GTK_THEME=Adwaita:dark baobab&"	
+	"VirtualBox"			!"VirtualBox&"
+	"TaskManager"			!"gnome-system-monitor&"
+	"HTop"					!"sakura -e htop&"
+	"BTop"					!"sakura -e btop&"
+	"Roccat"				!"roccatkonextdopticalconfig&"
+	"GWE"					!"/usr/bin/gwe %U&"
+	"Configs"				f.menu "configs"
+}
+
+menu "audio"
+{
+	"Audacious"				!"audacious&"
+	"Qmmp"					!"qmmp&"
+	"DeaDBeeF"				!"deadbeef&"
+	"FooBar2000"			!"env WINEPREFIX=\"$HOME/.wine\" wine $HOME/.wine/dosdevices/c:/Program\\ Files\\ \\(x86\\)/foobar2000/foobar2000.exe&"
+	"Reaper"				!"reaper&"
+	"Sound Converter"		!"soundconverter&"
+}
+
+menu "video-image"
+{
+	"Color Picker"			!"gcolor3&"
+	"VLC"					!"vlc&"
+	"MPV"					!"mpv&"
+	"KDEnlive"				!"kdenlive&"
+	"Blender"				!"blender&"
+	"Inkscape"				!"inkscape&"
+	"GIMP"					!"gimp&"
+}
+
+menu "network"
+{
+	"Network Connection"	!"nm-connection-editor&"
+	"Barrier"				!"barrier&"
+	"Brave 0.0"				!"brave.sh&"
+	"Brave 0.1"				!"brave.sh secondary&"
+	"Falkon 0.0"			!"falkon&"
+	"WaterFox 0.0"			!"waterfox.sh&"
+	"Librewolf 0.0"			!"librewolf.sh&"
+	"Palemoon 0.1"			!"palemoon.sh&"
+}
+
+menu "configs"
+{
+	"All Configs NPQQ"			!"notepadqq .ctwmrc .xinitrc .bashrc .env .bash_aliases .bash_profile .conkyrc .Xmodmap .Xdefaults .xbindkeysrc .imwheelrc $HOME/.config/picom.conf $HOME/.config/mimeapps.list&"
+	"All Configs FP"			!"featherpad .ctwmrc .xinitrc .bashrc .env .bash_aliases .bash_profile .conkyrc .Xmodmap .Xdefaults .xbindkeysrc .imwheelrc $HOME/.config/picom.conf $HOME/.config/mimeapps.list&"
+
+
+	""            			f.separator
+	".ctwmrc"				!"notepadqq .ctwmrc&"
+	".xinitrc"				!"notepadqq .xinitrc&"
+	".bashrc"				!"notepadqq .bashrc&"
+	".env"					!"notepadqq .env&"
+	".bash_aliases"			!"notepadqq .bash_aliases&"
+	".bash_profile"			!"notepadqq .bash_profile&"
+	".conkyrc"				!"notepadqq .conkyrc&"
+	".Xmodmap"				!"notepadqq .Xmodmap&"
+	".Xdefaults | .Xresources"				!"notepadqq .Xdefaults&"
+	".xbindkeysrc"			!"notepadqq .xbindkeysrc&"
+	".imwheelrc"			!"notepadqq .imwheelrc&"
+	"Session Start"			!"notepadqq $HOME/Documents/Scripts/$HOSTNAME/session_start.sh&"
+	"CTWM"					f.menu "CTWM"
+}
+
+#---------------------------------------------------------
+# WM DISPLAY CONFIGURATION                              
+#---------------------------------------------------------
+
+ForceFocus
+{
+"GemCraft Frostborn Wrath"
+"Escape From Tarkov"
+"Modern Warfare"
+"Modern Warfare 1"
+"Modern Warfare 2"
+"Modern Warfare 3"
+"foobar2000"
+"SPT-AKI R7"
+"SPT AKI"
+"YAD"
+}
+
+IconManagerDontShow
+{
+    "tint2"
+    "rofi"
+    "panel"
+} 
+
+NoHighLight
+{					# optional winlist. no list = no hl
+    "TWM Icon Manager"
+    "WorkSpaceManager"
+}   
+
+OccupyAll 
+{
+    "tint2"
+    "panel"
+#    "pavucontrol"
+#     "qjackctl"
+}
+
+AlwaysOnTop
+{
+#     "vlc"
+#     "VLC media player"
+#     "qjackctl"
+     "trayer"
+     "panel"
+#     "TWM Icon Manager"
+#     "WorkSpaceManager"
+     "tint2"
+}
+
+OnTopPriority 0 {
+#"librewolf"
+#"Waterfox"
+}
+
+NoTitle 
+#{
+#}
+
+NoBorder
+{
+#"brave"
+#"Pale Moon"
+#"waterfox"
+#"icecat"
+#"firefox"
+#"falkon"
+#"TWM Icon Manager"
+#"WorkSpaceManager"
+"ravenfield"
+}
+
+Occupy # always move this app. to the same workspace?
+{
+#          Window          "librewolf"   {"workspace1"}
+#          Window          "waterfox"   {"workspace1"}
+#          Window          "Falkon"   {"workspace2"}
+#          Window          "brave"   {"workspace1"}
+#          Window          "palemoon"   {"workspace1"}
+#          Window          "geany"   {"workspace1"}
+#          Window          "conky"   {"workspace1"}
+#          Window          "Conky"   {"workspace1"}
+#          Window          "conky-x86_64.AppImage"   {"workspace1"}
+#          Window          "keepassxc"   {"workspace2"}
+          Window          "audacious"   {"workspace2"}
+          Window          "qmmp"   {"workspace2"}
+          Window          "deadbeef"   {"workspace2"}
+          Window          "foobar2000"   {"workspace2"}
+#          Window          "klogg"   {"workspace3"}
+          Window          "fsearch"   {"workspace3"}
+          Window          "VirtualBox"   {"workspace4"}
+#          Window          "Steam"   {"workspace4"}
+          Window          "barrier"   {"workspace4"}
+          Window          "pavucontrol"   {"workspace2"}
+          Window          "qjackctl"   {"workspace2"}
+}
+
+WindowRing 				# which windows to use when warping
+#{					# if you don't list any windows  
+#}
+
+WindowRingExclude			# Don't include these windows i warp
+{
+	"panel"
+	"tint2"
+	"TWM Icon Manager"
+	"WorkSpaceManager"
+}
+
+DontWarpCursorInWMap
+
+#---------------------------------------------------------
+# FUNCTION DEFINITIONS                                   
+#---------------------------------------------------------
+
+Function "raise-and-resize"		{ f.raise f.deltastop f.resize }
+Function "ws-move-vanish1"		{ f.toggleoccupation "workspace1" f.vanish }
+Function "ws-move-vanish2"		{ f.toggleoccupation "workspace2" f.vanish }
+Function "ws-move-vanish3"		{ f.toggleoccupation "workspace3" f.vanish }
+Function "ws-move-vanish4"		{ f.toggleoccupation "workspace4" f.vanish }
+Function "ws-move-vanish5"		{ f.toggleoccupation "workspace5" f.vanish }
+Function "ws-move-vanish6"		{ f.toggleoccupation "workspace6" f.vanish }
+
+#---------------------------------------------------------
+# MOUSE BUTTON FUNCTIONS
+# BUTTONS	: CONTEXT	: FUNCTION            
+#---------------------------------------------------------
+"0xff67" = : all		: f.menu "Menus"
+#Button1 = : root		: f.menu "Menus"
+#Button3 = c : w		: f.menu "windows" # enable wm context on middle mouse
+#Button3 = : root		: f.menu "windows"
+Button1 = mod3 : w		: f.move
+Button1 =	: f			: f.function "raise-and-resize"
+
+#---------------------------------------------------------
+# KEY FUNCTIONS
+# KEYS	= Altkey: CONTEXT	: FUNCTION
+#---------------------------------------------------------
+
+# Escape
+"0xff1b" = c|m : all : !"xkill"
+
+"F1" = c : all : f.gotoworkspace "workspace1"
+"F2" = c : all : f.gotoworkspace "workspace2"
+"F3" = c : all : f.gotoworkspace "workspace3"
+"F4" = c : all : f.gotoworkspace "workspace4"
+"F5" = c : all : f.gotoworkspace "workspace5"
+"F6" = c : all : f.gotoworkspace "workspace6"
+
+"1" = c|s : w : f.function "ws-move-vanish1"
+"2" = c|s : w : f.function "ws-move-vanish2"
+"3" = c|s : w : f.function "ws-move-vanish3"
+"4" = c|s : w : f.function "ws-move-vanish4"
+"5" = c|s : w : f.function "ws-move-vanish5"
+"6" = c|s : w : f.function "ws-move-vanish6"
+"0" = c|s : w : f.occupy
+
+"0xff61"		= mod3 : all        	: !"$HOME/Documents/Scripts/pillar/screenshot.sh sa&"
+"0xff61"		= c : all				: !"$HOME/Documents/Scripts/pillar/screenshot.sh&"
+"0xff61"		= c|mod4 : all			: !"$HOME/Documents/Scripts/pillar/screenshot.sh sw&"
+"E"				= mod4 : all			: !"$HOME/Scripts/pillar/xy_launch.sh e &"
+"Delete"     	= c|m : all				: !"gnome-system-monitor&"
+"R"				= mod4 : all			: !"launcher&"
+"0x20"			= mod4 : all			: !"$HOME/Scripts/pillar/space_runner.sh run&"
+"R"				= mod4 : all			: !"$HOME/Scripts/pillar/space_runner.sh run&"
+"L"				= mod4 : all			: !"slock&"
+"T"				= c|m : all				: !"$HOME/Scripts/pillar/xy_launch.sh t&"
+"M"				= c|m : all				: !"$HOME/Scripts/pillar/xy_launch.sh m&"
+"W"				= mod4 : all			: !"rofi -show window&"
+"D"				= mod4 : all			: f.showbackground
+"0xff1b"		= c : w					: f.deleteordestroy # close window
+"V"				= c|s : all				: !"clipmenu&"
+"F9"			= m | c | s : all		: f.restart
+"Tab"			= m	: all				: f.warpring "next"
+"Tab"			= m|s : all				: f.warpring "prev"
+"Right"			= mod4 : w				: f.jumpright "6"
+"Left"			= mod4 : w				: f.jumpleft "6"
+"Up"			= mod4 : w				: f.jumpup "6"
+"Down"			= mod4 : w				: f.jumpdown "6"
+"Right"			= c	: w					: !"$HOME/Scripts/pillar/maximize.sh right&"
+"Left"			= c	: w					: !"$HOME/Scripts/pillar/maximize.sh left&"
+"Up"			= c : w					: !"$HOME/Scripts/pillar/maximize.sh top&"
+"Down"			= c : w					: !"$HOME/Scripts/pillar/maximize.sh bottom&"
+"F1"			= m|s : all 			: !"$HOME/Scripts/pillar/maximize.sh small&"
+"F2"			= m|s : all 			: !"$HOME/Scripts/pillar/maximize.sh large&"
+"F3"			= m|s : all 			: !"$HOME/Scripts/pillar/maximize.sh tsr&"
+"F11"			= : w 					: f.fullscreenzoom
+"B"				= m : w 				: f.raiselower
+"X"				= m : w 				: !"$HOME/Scripts/pillar/maximize.sh max&"
+"C"				= m : w 				: !"$HOME/Scripts/pillar/maximize.sh cust&"
+"X"				= mod4 : w 				: f.raiselower
+"F12"			= c : all   			: f.fullzoom
+"F10"			= : "sakura" 			: f.raise
+"F10"			= mod3 : w 				: !"$HOME/Scripts/pillar/aot.sh&"
+
+#SloppyFocus
+ClickToFocus            # Prevent mouse movement changing focus
+RaiseOnClick            # Window rises when clicked
+RaiseOnClickButton 1    # When clicked with button 1, that is.
+UsePPosition 		  "on"		# Help kbd instantiated windows get focus # let the apps have their way?
+
+#RandomPlacement          "on"		# ask for pos? # Help kbd instantiated windows get focus
+AutoFocusToTransients   # Help kbd instantiated windows get focus
+SaveWorkspaceFocus      # Obviously workspace focus should be retained
+
+IgnoreCaseInMenuSelection # Make menus much easier via keyboard
+ShortAllWindowsMenus    # Don't show iconmgr and workspace mgr in lists # Don't show IM and WSM in win.menu
+
