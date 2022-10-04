@@ -1,0 +1,86 @@
+-- Config_Settings: http://conky.sourceforge.net/config_settings.html
+-- Config_Variables: http://conky.sourceforge.net/variables.html
+
+conky.config = {
+
+  -- Conky --
+
+  background = false,
+  update_interval = 1,
+  total_run_times = 0,  
+  cpu_avg_samples = 4,
+  net_avg_samples = 2,  
+  override_utf8_locale = true,  
+  double_buffer = true,
+  no_buffers = true,
+  imlib_cache_size=0,  
+  text_buffer_size = 256,
+
+  -- Window --
+
+  own_window = true,
+  own_window_colour = '#000000',
+  own_window_class = 'Conky',
+  own_window_argb_visual = false,
+  own_window_argb_value = 10,
+  own_window_type = 'override',
+  own_window_transparent = true,
+  own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+  border_inner_margin = 0,
+  border_width = 1,
+  minimum_height = 0,
+  minimum_width = 480,
+  maximum_width = 628,
+  alignment = 'bottom_right',
+  gap_x = 20,
+  gap_y = 0,
+
+  -- Graphics -- 
+
+  draw_shades = false,
+  draw_outline = false,
+  draw_borders = false,
+  draw_graph_borders = true,
+  
+  -- Text --
+
+  use_xft = true,
+  font = 'Terminus',
+  xftalpha = 1,
+  uppercase = false,
+  pad_percents = 0,
+
+  -- Colors --
+
+  default_color = '464646',
+  default_shade_color = '000000',
+  default_outline_color = 'FFFFFF',
+
+};
+
+conky.text = [[
+#${image "/home/shed/Documents/03M/OEM\ Tools/Cursors/png_icons/m0dw3rks.png" -p 0,0 -s 42x42 -f 86400}
+#				-- Date/Time/Weather --
+#${color FFB600}${font :size= 10}${time %A, %d %B %Y}
+#${color FFB600}${font :size= 36}${time %H:%M}
+#				-- CPU -- #${goto 266}$uptime
+${alignc}${color CCCCCC}${exec hostnamectl | grep 'Operating System: ' | awk '{print $3,$4}'} ${exec hostnamectl | grep 'Kernel: ' | awk '{print $3,$4}'}${offset 20}$nodename_short${offset 20}UT: $uptime${offset 20}${time %H:%M:%S}
+${alignc}${color FF0000}${font :size= 12}Ryzen 7 2700X${offset 20}$cpu%${offset 20}${exec sensors | grep 'Tctl' | awk -F'+' '{print $2}'}${offset 20}${exec cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor}
+#${goto 206}$nodename_short${color FF0000}${goto 260}${exec hostnamectl | grep 'Operating System: ' | awk '{print $3,$4}'} ${exec hostnamectl | grep 'Kernel: ' | awk '{print $3,$4}'}${goto 488}$uptime
+${alignc}${color 464646}${cpubar cpu0 6,28 #FF0000 #FFFF00} ${cpubar cpu1 6,28 #FF0000 #FFFF00} ${cpubar cpu2 6,28 #FF0000 #FFFF00} ${cpubar cpu3 6,28 #FF0000 #FFFF00} ${cpubar cpu4 6,28 #FF0000 #FFFF00} ${cpubar cpu5 6,28 #FF0000 #FFFF00} ${cpubar cpu6 6,28 #FF0000 #FFFF00} ${cpubar cpu7 6,28 #FF0000 #FFFF00} ${cpubar cpu8 6,28 #FF0000 #FFFF00} ${cpubar cpu9 6,28 #FF0000 #FFFF00} ${cpubar cpu10 6,28 #FF0000 #FFFF00} ${cpubar cpu11 6,28 #FF0000 #FFFF00} ${cpubar cpu12 6,28 #FF0000 #FFFF00} ${cpubar cpu13 6,28 #FF0000 #FFFF00} ${cpubar cpu14 6,28 #FF0000 #FFFF00} ${cpubar cpu15 6,28 #FF0000 #FFFF00}
+${alignc}${color 222222}${cpugraph 18,600  000000 FFC600}
+#				-- GPU's --
+${color CCCCCC}${font :size= 12}RAM $mem ${color 464646}${voffset 2}${membar 12,48}${goto 220}${color 22CF10}${exec /home/shed/Scripts/pillar/nvTmps.sh 1660}${goto 400}${exec /home/shed/Scripts/pillar/nvTmps.sh 1060}
+#				-- RAM --#${color 0000FF}${font :size= 12}Swap${alignr}$swapperc% / $swapmax
+#${offset 4}${color 222222}${memgraph 12,600 FF8800 FFC600}
+#				-- HD --
+${color FFB600}${font :size= 12}/ ${color CCCCCC}${diskio /dev/nvme0n1p2}${goto 110}${exec df -h | grep /dev/nvme0n1p2 | awk NR==1'{print $2,$5}'}${goto 219}${#464646}${fs_bar 12,48 /}${goto 300}${color FFB600}${font :size= 12}WIC ${color CCCCCC}${diskio /dev/md127p1}${goto 410}${exec df -h | grep /dev/md127p1 | awk '{print $2,$5}'}${goto 519}${#464646}${fs_bar 12,48 /home}
+${color 222222}${diskiograph_read /dev/nvme0n1p2 12,133 00FF00 002800}${diskiograph_write /dev/nvme0n1p2 12,133 FF0000 280000}${goto 300}${diskiograph_read /dev/md127p1 12,133 00FF00 002800}${diskiograph_write /dev/md127p1 12,133 FF0000 280000}
+${color FFB600}${font :size= 12}r3drum ${color CCCCCC}${diskio /dev/sdc1}${goto 110}${exec df -h | grep /dev/sdc1 | awk '{print $2,$5}'}${goto 219}${#464646}${fs_bar 12,48 /home/shed/.r3drum}${goto 300}${color FFB600}${font :size= 12}3valred ${color CCCCCC}${diskio /dev/sdd1}${goto 410}${exec df -h | grep /dev/sdd1 | awk '{print $2,$5}'}${goto 519}${#464646}${fs_bar 12,48 /home/shed/.3valred}
+${color 222222}${diskiograph_read /dev/sdc1 12,133 00FF00 002800}${diskiograph_write /dev/sdc1 12,133 FF0000 280000}${goto 300}${diskiograph_read /dev/sdd1 12,133 00FF00 002800}${diskiograph_write /dev/sdd1 12,133 FF0000 280000}
+${color FFB600}${font :size= 12}tmp ${color CCCCCC}${diskio /tmp}${goto 110}${exec df -h | grep /tmp | awk NR==1'{print $2,$5}'}${goto 219}${#464646}${fs_bar 12,48 /tmp}${goto 300}${color FFB600}${font :size= 12}warehouse ${color CCCCCC}${diskio /home/shed/warehouse}${goto 410}${exec df -h | grep /home/shed/warehouse | awk '{print $2,$5}'}${goto 519}${#464646}${fs_bar 12,48 /home/shed/warehouse}
+${color 222222}${diskiograph_read /tmp 12,133 00FF00 002800}${diskiograph_write /tmp 12,133 FF0000 280000}${goto 300}${diskiograph_read /home/shed/warehouse 12,133 00FF00 002800}${diskiograph_write /home/shed/warehouse 12,133 FF0000 280000}
+#				-- INTERNET --▼▲
+${color 00FF00}${font :size=8}DOWN ${downspeedf enp34s0}${goto 300}${color FF0000}UP  ${upspeedf enp34s0}
+${color FFFFFF}${color 222222}${downspeedgraph enp34s0 12,300 000000 00FF00}${color e95420}${color 222222}${upspeedgraph enp34s0 12,300 000000 FF0000}
+]];

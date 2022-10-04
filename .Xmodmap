@@ -1,0 +1,18 @@
+!xmodmap -pm to list
+!xmodmap ~/.Xmodmap to load
+!0xffe5 66 caps
+!0xffea 108 altgr
+!0xffeb 133 Super_L
+
+keycode 66 = Caps_Lock
+keycode 108 = Alt_R
+
+remove mod4 = Super_L
+remove mod4 = Super_R
+remove mod4 = Hyper_L
+remove lock = Caps_Lock
+remove mod1 = Alt_R
+keysym Caps_Lock = Alt_R
+add mod3 = Alt_R
+add mod3 = Caps_Lock
+add mod4 = Super_L

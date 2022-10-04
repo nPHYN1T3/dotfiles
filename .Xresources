@@ -1,0 +1,29 @@
+*background:  #080808
+*cursorColor:  #ffb600
+*foreground:  #cccccc
+*color0:  #000000
+*color1:  #cc0000
+*color2:  #00aa00
+*color3:  #ccaa00
+*color4:  #0000dc
+*color5:  #cc00bb
+*color6:  #00aabb
+*color7:  #e5c3d4
+*color8:  #7f5d6e
+*color9:  #fe0000
+*color10:  #00dc00
+*color11:  #fedc00
+*color12:  #5b39ed
+*color13:  #fe00ed
+*color14:  #00dced
+*color15:  #fedced
+
+Sxiv.background: #080808
+Sxiv.foreground: #888888
+
+Xcursor.theme: "Future Cursors"
+Xcursor.size: 32
+
+xpdf*reverseVideo
+xpdf*Foreground: #888000
+xpdf*Background: #080808
