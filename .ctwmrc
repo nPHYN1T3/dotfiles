@@ -525,24 +525,24 @@ DontWarpCursorInWMap
 # FUNCTION DEFINITIONS                                   
 #---------------------------------------------------------
 
-Function "raise-and-resize"    { f.raise f.deltastop f.resize }
-Function "ws-move-vanish1"                { f.toggleoccupation "workspace1" f.vanish }
-Function "ws-move-vanish2"                { f.toggleoccupation "workspace2" f.vanish }
-Function "ws-move-vanish3"                { f.toggleoccupation "workspace3" f.vanish }
-Function "ws-move-vanish4"                { f.toggleoccupation "workspace4" f.vanish }
-Function "ws-move-vanish5"                { f.toggleoccupation "workspace5" f.vanish }
-Function "ws-move-vanish6"                { f.toggleoccupation "workspace6" f.vanish }
+Function "raise-and-resize"		{ f.raise f.deltastop f.resize }
+Function "ws-move-vanish1"		{ f.toggleoccupation "workspace1" f.vanish }
+Function "ws-move-vanish2"		{ f.toggleoccupation "workspace2" f.vanish }
+Function "ws-move-vanish3"		{ f.toggleoccupation "workspace3" f.vanish }
+Function "ws-move-vanish4"		{ f.toggleoccupation "workspace4" f.vanish }
+Function "ws-move-vanish5"		{ f.toggleoccupation "workspace5" f.vanish }
+Function "ws-move-vanish6"		{ f.toggleoccupation "workspace6" f.vanish }
 
 #---------------------------------------------------------
 # MOUSE BUTTON FUNCTIONS
 # BUTTONS	: CONTEXT	: FUNCTION            
 #---------------------------------------------------------
-"0xff67" =	: all		: f.menu "Menus"
-#Button1 =	: root		: f.menu "Menus"
-#Button3 =	c : w		: f.menu "windows" # enable wm context on middle mouse
-#Button3 =	: root		: f.menu "windows"
-Button1 = mod3 : w  : f.move
-Button1 =	: f		: f.function "raise-and-resize"
+"0xff67" = : all		: f.menu "Menus"
+#Button1 = : root		: f.menu "Menus"
+#Button3 = c : w		: f.menu "windows" # enable wm context on middle mouse
+#Button3 = : root		: f.menu "windows"
+Button1 = mod3 : w		: f.move
+Button1 =	: f			: f.function "raise-and-resize"
 
 #---------------------------------------------------------
 # KEY FUNCTIONS
@@ -552,12 +552,12 @@ Button1 =	: f		: f.function "raise-and-resize"
 # Escape
 "0xff1b" = c|m : all : !"xkill"
 
-"F1"       = c	: all		: f.gotoworkspace "workspace1"
-"F2"       = c	: all		: f.gotoworkspace "workspace2"
-"F3"       = c	: all		: f.gotoworkspace "workspace3"
-"F4"       = c	: all		: f.gotoworkspace "workspace4"
-"F5"       = c	: all		: f.gotoworkspace "workspace5"
-"F6"       = c	: all		: f.gotoworkspace "workspace6"
+"F1" = c : all : f.gotoworkspace "workspace1"
+"F2" = c : all : f.gotoworkspace "workspace2"
+"F3" = c : all : f.gotoworkspace "workspace3"
+"F4" = c : all : f.gotoworkspace "workspace4"
+"F5" = c : all : f.gotoworkspace "workspace5"
+"F6" = c : all : f.gotoworkspace "workspace6"
 
 "1" = c|s : w : f.function "ws-move-vanish1"
 "2" = c|s : w : f.function "ws-move-vanish2"
@@ -567,44 +567,43 @@ Button1 =	: f		: f.function "raise-and-resize"
 "6" = c|s : w : f.function "ws-move-vanish6"
 "0" = c|s : w : f.occupy
 
-"0xff61"       = mod3 : all         : !"$HOME/Documents/Scripts/pillar/screenshot.sh sa&"
-"0xff61"       = c : all         : !"$HOME/Documents/Scripts/pillar/screenshot.sh&"
-"0xff61"       = c|mod4 : all         : !"$HOME/Documents/Scripts/pillar/screenshot.sh sw&"
-"E"     = mod4 : all : !"$HOME/Scripts/pillar/xy_launch.sh e &"
-"Delete"     = c|m : all : !"gnome-system-monitor&"
-"R"     = mod4 : all : !"launcher&"
-"0x20"     = mod4 : all : !"$HOME/Scripts/pillar/space_runner.sh run&"
-"R"     = mod4 : all : !"$HOME/Scripts/pillar/space_runner.sh run&"
-"L"     = mod4 : all : !"slock&"
-"T"     = c|m : all         : !"$HOME/Scripts/pillar/xy_launch.sh t&"
-"M"     = c|m : all         : !"$HOME/Scripts/pillar/xy_launch.sh m&"
-"W"     = mod4 : all : !"rofi -show window&"
-"D"    = mod4 : all : f.showbackground
-"0xff1b" = c : w : f.deleteordestroy # close window
-"V" = c|s : all : !"clipmenu&"
-"F9" = m | c | s : all : f.restart
-"Tab"      = m	: all		: f.warpring "next"
-"Tab"      = m|s	: all		: f.warpring "prev"
-"Right"    = mod4	: w		: f.jumpright "6"
-"Left"     = mod4 : w		: f.jumpleft "6"
-"Up"       = mod4 : w		: f.jumpup "6"
-"Down"     = mod4 : w		: f.jumpdown "6"
-"Right"    = c	: w		: !"$HOME/Scripts/pillar/maximize.sh right&"
-"Left"     = c	: w		: !"$HOME/Scripts/pillar/maximize.sh left&"
-"Up"       = c  : w		: !"$HOME/Scripts/pillar/maximize.sh top&"
-"Down"     = c  : w		: !"$HOME/Scripts/pillar/maximize.sh bottom&"
-
-"F1"     = m|s : all : !"$HOME/Scripts/pillar/maximize.sh small&"
-"F2"     = m|s : all : !"$HOME/Scripts/pillar/maximize.sh large&"
-"F3"     = m|s : all : !"$HOME/Scripts/pillar/maximize.sh tsr&"
-"F11"     = : w : f.fullscreenzoom
-"B"     = m : w : f.raiselower
-"X"     = m : w : !"$HOME/Scripts/pillar/maximize.sh max&"
-"C"     = m : w : !"$HOME/Scripts/pillar/maximize.sh cust&"
-"X"    =      mod4 : w : f.raiselower
-"F12"   =      c : all   : f.fullzoom
-"F10" = : "sakura" : f.raise
-"F10" = mod3 : w : !"$HOME/Scripts/pillar/aot.sh&"
+"0xff61"		= mod3 : all        	: !"$HOME/Documents/Scripts/pillar/screenshot.sh sa&"
+"0xff61"		= c : all				: !"$HOME/Documents/Scripts/pillar/screenshot.sh&"
+"0xff61"		= c|mod4 : all			: !"$HOME/Documents/Scripts/pillar/screenshot.sh sw&"
+"E"				= mod4 : all			: !"$HOME/Scripts/pillar/xy_launch.sh e &"
+"Delete"     	= c|m : all				: !"gnome-system-monitor&"
+"R"				= mod4 : all			: !"launcher&"
+"0x20"			= mod4 : all			: !"$HOME/Scripts/pillar/space_runner.sh run&"
+"R"				= mod4 : all			: !"$HOME/Scripts/pillar/space_runner.sh run&"
+"L"				= mod4 : all			: !"slock&"
+"T"				= c|m : all				: !"$HOME/Scripts/pillar/xy_launch.sh t&"
+"M"				= c|m : all				: !"$HOME/Scripts/pillar/xy_launch.sh m&"
+"W"				= mod4 : all			: !"rofi -show window&"
+"D"				= mod4 : all			: f.showbackground
+"0xff1b"		= c : w					: f.deleteordestroy # close window
+"V"				= c|s : all				: !"clipmenu&"
+"F9"			= m | c | s : all		: f.restart
+"Tab"			= m	: all				: f.warpring "next"
+"Tab"			= m|s : all				: f.warpring "prev"
+"Right"			= mod4 : w				: f.jumpright "6"
+"Left"			= mod4 : w				: f.jumpleft "6"
+"Up"			= mod4 : w				: f.jumpup "6"
+"Down"			= mod4 : w				: f.jumpdown "6"
+"Right"			= c	: w					: !"$HOME/Scripts/pillar/maximize.sh right&"
+"Left"			= c	: w					: !"$HOME/Scripts/pillar/maximize.sh left&"
+"Up"			= c : w					: !"$HOME/Scripts/pillar/maximize.sh top&"
+"Down"			= c : w					: !"$HOME/Scripts/pillar/maximize.sh bottom&"
+"F1"			= m|s : all 			: !"$HOME/Scripts/pillar/maximize.sh small&"
+"F2"			= m|s : all 			: !"$HOME/Scripts/pillar/maximize.sh large&"
+"F3"			= m|s : all 			: !"$HOME/Scripts/pillar/maximize.sh tsr&"
+"F11"			= : w 					: f.fullscreenzoom
+"B"				= m : w 				: f.raiselower
+"X"				= m : w 				: !"$HOME/Scripts/pillar/maximize.sh max&"
+"C"				= m : w 				: !"$HOME/Scripts/pillar/maximize.sh cust&"
+"X"				= mod4 : w 				: f.raiselower
+"F12"			= c : all   			: f.fullzoom
+"F10"			= : "sakura" 			: f.raise
+"F10"			= mod3 : w 				: !"$HOME/Scripts/pillar/aot.sh&"
 
 #SloppyFocus
 ClickToFocus            # Prevent mouse movement changing focus
