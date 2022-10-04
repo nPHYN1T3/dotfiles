@@ -1,3 +1,5 @@
+! Basic key tweaks for my CTWM controls.
+
 !xmodmap -pm to list
 !xmodmap ~/.Xmodmap to load
 !0xffe5 66 caps
