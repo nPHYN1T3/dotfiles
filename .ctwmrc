@@ -28,7 +28,7 @@ WorkSpaceFont	 "-*-terminus-*-r-normal-*-20-*-*-*-*-*-*-*"
 # PIXMAPS
 #---------------------------------------------------------
 
-#PixmapDirectory          "/usr/share/pixmaps/home/shed/Documents/03M/OEM Tools/Cursors/"	# dir. for xpms
+PixmapDirectory          "/usr/share/pixmaps/"	# dir. for xpms
 
 Pixmaps
 {
@@ -215,8 +215,8 @@ RightTitleButton           "xpm:verexp.xpm"    = f.zoom
 
 #RplaySounds
 #{
-#"KeyPress" "/home/shed/Desktop/test.wav"
-#"FocusIn" "/home/shed/Desktop/test.wav"
+#"KeyPress" "$HOME/Desktop/test.wav"
+#"FocusIn" "$HOME/Desktop/test.wav"
 #}
 
 
@@ -290,7 +290,6 @@ IconifyByUnmapping			# no icon when iconified
 #AutoRaiseIcons				# raise icons when under cursor
 
 IconDirectory            "/usr/include/X11/bitmaps"
-#IconDirectory            "/home/shed/Documents/03M/OEM\\ Tools/Cursors/png_icons"		# dir. for bitmapI
 IconJustification         "left"	# where put image/title?
 MaxIconTitleWidth         220
 IconBorderWidth          1             # frame around I?
@@ -305,8 +304,6 @@ IconRegionJustification  "left"
 
 Icons
 {
-   "xterm"        "/home/shed/Documents/03M/OEM\\ Tools/Cursors/png_icons/terminal.png"
-   "sakura"        "/home/shed/Documents/03M/OEM\\ Tools/Cursors/png_icons/terminal.png"
 #   "emacs"        "xpm:edit1.xpm"
 }
 
@@ -399,45 +396,45 @@ menu "games"
 {
 	"0 A.D."				!"0ad&"
 #	"Arma 3"				!"steam skip steam://rungameid/107410&"
-	"Beyond All Reason"		!"DISPLAY=:0.0 /home/shed/Games/Beyond-All-Reason-1.1522.0.AppImage&"
-	"Brigador"				!"/home/shed/Games/Brigador\\ Up\\ Armored\\ Edition/start.sh&"
+	"Beyond All Reason"		!"DISPLAY=:0.0 $HOME/Games/Beyond-All-Reason-1.1522.0.AppImage&"
+	"Brigador"				!"$HOME/Games/Brigador\\ Up\\ Armored\\ Edition/start.sh&"
 #	"Cataclysm: DDA"		!"sakura -x cataclysm&"
 	"COD MW 1"				!"cod1.sh&"
 	"COD MW 2"				!"cod2.sh&"
 	"COD MW 3"				!"cod3.sh&"
 	"DosBox"				!"dosbox&"
-#	"FRICK Inc."			!"DISPLAY=:0.0 /home/shed/Games/FrickInc/frickInc.x86_64&"
+#	"FRICK Inc."			!"DISPLAY=:0.0 $HOME/Games/FrickInc/frickInc.x86_64&"
 #	"GemCraft - Chasing Shadows" !"steam skip steam://rungameid/296490&"
 #	"GemCraft - Frostborn Wrath" !"steam skip steam://rungameid/1106530&"
 #	"GROUND BRANCH"			!"steam skip steam://rungameid/16900&"
 #	"Hedgewars"				!"hedgewars&"
 #	"Minetest"				!"minetest&"
 	"MorroWind"				!"openmw-launcher&"
-	"Netherguild"			("red":"blue")!"/home/shed/Games/Netherguild/Netherguild&"
-	"Never Winter Nights 2"	("white":"#616aa1")!"/home/shed/Games/Neverwinter\\ Nights\\ 2\\ Complete/nwn2.sh&"
+	"Netherguild"			("red":"blue")!"$HOME/Games/Netherguild/Netherguild&"
+	"Never Winter Nights 2"	("white":"#616aa1")!"$HOME/Games/Neverwinter\\ Nights\\ 2\\ Complete/nwn2.sh&"
 	"Oblivion"				("#FFB600":"#121212")!"env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/1&"
 #	"Orcs Must Die! 2"		!"steam skip steam://rungameid/201790&"
 #	"Orcs Must Die!"		!"steam skip steam://rungameid/102600&"
 	"Pingus"				("#FFB600":"#121212")!"pingus&"
-	"Project Zomboid"		("white":"#000012")!"/home/shed/Games/Project\\ Zomboid/start.sh&"
-	"Quake 2"				("#FFB600":"#121212")!"/home/shed/Games/Quake\\ II/q2.sh&"
+	"Project Zomboid"		("white":"#000012")!"$HOME/Games/Project\\ Zomboid/start.sh&"
+	"Quake 2"				("#FFB600":"#121212")!"$HOME/Games/Quake\\ II/q2.sh&"
 #	"Ravenfield"			!"steam skip steam://rungameid/636480&"
-	"ReVolt"				("white":"#460000")!"/home/shed/Games/rvgl/rvgl.64&"
-	"SandStorm"				("#FFB600":"#121212")!"/home/shed/Scripts/pillar/launchers/StartSandstorm.sh&"
-	"Sargosian Abyss"		("black":"red")!"/home/shed/Games/SargosianAbyss/The\\ Sargosian\\ Abyss.sh&"
-	"Shattered Pixel Dungeon"	("#FFB600":"#121212")!"/home/shed/Games/Shattered\\ Pixel\\ Dungeon/start.sh&"
+	"ReVolt"				("white":"#460000")!"$HOME/Games/rvgl/rvgl.64&"
+	"SandStorm"				("#FFB600":"#121212")!"$HOME/Scripts/pillar/launchers/StartSandstorm.sh&"
+	"Sargosian Abyss"		("black":"red")!"$HOME/Games/SargosianAbyss/The\\ Sargosian\\ Abyss.sh&"
+	"Shattered Pixel Dungeon"	("#FFB600":"#121212")!"$HOME/Games/Shattered\\ Pixel\\ Dungeon/start.sh&"
 	"Steam"					("white":"#1b2838")!"steam&"
-	"Tarkov"				("#CC00FF":"#000012")!"/home/shed/Scripts/pillar/launchers/StartTarkov.sh&"
+	"Tarkov"				("#CC00FF":"#000012")!"$HOME/Scripts/pillar/launchers/StartTarkov.sh&"
 #	"TeeWorlds"				!"teeworlds&"
-#	"The Dark Mod"			!"/home/shed/Games/TheDarkMod/thedarkmod.x64&"
+#	"The Dark Mod"			!"$HOME/Games/TheDarkMod/thedarkmod.x64&"
 #	"The Long Dark"			!"steam skip steam://rungameid/305620&"
-	"Tower Of Time"			("#FFB600":"#121212")!"/home/shed/Games/Tower\\ of\\ Time/start.sh&"
+	"Tower Of Time"			("#FFB600":"#121212")!"$HOME/Games/Tower\\ of\\ Time/start.sh&"
 #	"Ur-Quan Masters"		!"uqm&"
-	"Veloren"				("#FFB600":"#121212")!"/home/shed/.local/share/airshipper/airshipper&"
-	"WarCraft II"			("#FFB600":"#121212")!"/home/shed/Games/Warcraft\\ II/drive_c/GOG Games/Warcraft\\ II\\ BNE/wc2.sh&"
-	"WarCraft III"			("#FFB600":"#121212")!"/home/shed/Games/Warcraft\\ III/wc3.sh&"
-	"Xenonauts"				("#FFB600":"#121212")!"/home/shed/Games/Xenonauts/start.sh&"
-	"Zorbus"				("white":"#4b5463")!"cd /home/shed/Games/Zorbus ; DISPLAY=:0.0 wine /home/shed/Games/Zorbus/Zorbus.exe&"
+	"Veloren"				("#FFB600":"#121212")!"$HOME/.local/share/airshipper/airshipper&"
+	"WarCraft II"			("#FFB600":"#121212")!"$HOME/Games/Warcraft\\ II/drive_c/GOG Games/Warcraft\\ II\\ BNE/wc2.sh&"
+	"WarCraft III"			("#FFB600":"#121212")!"$HOME/Games/Warcraft\\ III/wc3.sh&"
+	"Xenonauts"				("#FFB600":"#121212")!"$HOME/Games/Xenonauts/start.sh&"
+	"Zorbus"				("white":"#4b5463")!"cd $HOME/Games/Zorbus ; DISPLAY=:0.0 wine $HOME/Games/Zorbus/Zorbus.exe&"
 }
 
 menu "utils"
@@ -484,7 +481,7 @@ menu "dev"
 	"NeoVIM"				!"nvim %F&"
 	"Unity"					!"unity&"
 	"SimulIDE"				!"simulide&"
-	"ArduinoIDE"			!"/home/shed/.local/share/bin/arduino-ide_2.0.0_Linux_64bit.AppImage&"
+	"ArduinoIDE"			!"$HOME/.local/share/bin/arduino-ide_2.0.0_Linux_64bit.AppImage&"
 }
 
 menu "system"
@@ -507,7 +504,7 @@ menu "audio"
 	"Audacious"				!"audacious&"
 	"Qmmp"					!"qmmp&"
 	"DeaDBeeF"				!"deadbeef&"
-	"FooBar2000"			!"env WINEPREFIX=\"/home/shed/.wine\" wine /home/shed/.wine/dosdevices/c:/Program\\ Files\\ \\(x86\\)/foobar2000/foobar2000.exe&"
+	"FooBar2000"			!"env WINEPREFIX=\"$HOME/.wine\" wine $HOME/.wine/dosdevices/c:/Program\\ Files\\ \\(x86\\)/foobar2000/foobar2000.exe&"
 	"Reaper"				!"reaper&"
 	"Sound Converter"		!"soundconverter&"
 }
@@ -537,8 +534,8 @@ menu "network"
 
 menu "configs"
 {
-	"All Configs NPQQ"			!"notepadqq .ctwmrc .xinitrc .bashrc .env .bash_aliases .bash_profile .conkyrc .Xmodmap .Xdefaults .xbindkeysrc .imwheelrc /home/shed/.config/picom.conf /home/shed/.config/mimeapps.list&"
-	"All Configs FP"			!"featherpad .ctwmrc .xinitrc .bashrc .env .bash_aliases .bash_profile .conkyrc .Xmodmap .Xdefaults .xbindkeysrc .imwheelrc /home/shed/.config/picom.conf /home/shed/.config/mimeapps.list&"
+	"All Configs NPQQ"			!"notepadqq .ctwmrc .xinitrc .bashrc .env .bash_aliases .bash_profile .conkyrc .Xmodmap .Xdefaults .xbindkeysrc .imwheelrc $HOME/.config/picom.conf $HOME/.config/mimeapps.list&"
+	"All Configs FP"			!"featherpad .ctwmrc .xinitrc .bashrc .env .bash_aliases .bash_profile .conkyrc .Xmodmap .Xdefaults .xbindkeysrc .imwheelrc $HOME/.config/picom.conf $HOME/.config/mimeapps.list&"
 
 
 	""            			f.separator
@@ -870,25 +867,25 @@ Button1 =	: f		: f.function "raise-and-resize"
 "0" = c|s : w : f.occupy
 
 
-"0xff61"       = mod3 : all         : !"/home/shed/Documents/Scripts/pillar/screenshot.sh sa&"
-"0xff61"       = c : all         : !"/home/shed/Documents/Scripts/pillar/screenshot.sh&"
-"0xff61"       = c|mod4 : all         : !"/home/shed/Documents/Scripts/pillar/screenshot.sh sw&"
-"E"     = mod4 : all : !"/home/shed/Scripts/pillar/xy_launch.sh e &"
+"0xff61"       = mod3 : all         : !"$HOME/Documents/Scripts/pillar/screenshot.sh sa&"
+"0xff61"       = c : all         : !"$HOME/Documents/Scripts/pillar/screenshot.sh&"
+"0xff61"       = c|mod4 : all         : !"$HOME/Documents/Scripts/pillar/screenshot.sh sw&"
+"E"     = mod4 : all : !"$HOME/Scripts/pillar/xy_launch.sh e &"
 "Delete"     = c|m : all : !"gnome-system-monitor&"
 "R"     = mod4 : all : !"launcher&"
 
 #space 0x20 65
-"0x20"     = mod4 : all : !"/home/shed/Scripts/pillar/space_runner.sh run&"
-"R"     = mod4 : all : !"/home/shed/Scripts/pillar/space_runner.sh run&"
+"0x20"     = mod4 : all : !"$HOME/Scripts/pillar/space_runner.sh run&"
+"R"     = mod4 : all : !"$HOME/Scripts/pillar/space_runner.sh run&"
 "L"     = mod4 : all : !"slock&"
-"T"     = c|m : all         : !"/home/shed/Scripts/pillar/xy_launch.sh t&"
-"M"     = c|m : all         : !"/home/shed/Scripts/pillar/xy_launch.sh m&"
+"T"     = c|m : all         : !"$HOME/Scripts/pillar/xy_launch.sh t&"
+"M"     = c|m : all         : !"$HOME/Scripts/pillar/xy_launch.sh m&"
 #"W"     = mod4 : all : !"winlist cw&"
 "W"     = mod4 : all : !"rofi -show window&"
 #f.iconify
 "D"    = mod4 : all : f.showbackground
 "0xff1b" = c : w : f.deleteordestroy # close window
-#"V" = c|s : all : !"/home/shed/Scripts/pillar/space_runner.sh cb&"
+#"V" = c|s : all : !"$HOME/Scripts/pillar/space_runner.sh cb&"
 "V" = c|s : all : !"clipmenu&"
 "F9" = m | c | s : all : f.restart
 #"R" = m : w : f.resize
@@ -902,22 +899,22 @@ Button1 =	: f		: f.function "raise-and-resize"
 "Up"       = mod4 : w		: f.jumpup "6"
 "Down"     = mod4 : w		: f.jumpdown "6"
 
-"Right"    = c	: w		: !"/home/shed/Scripts/pillar/maximize.sh right&"
-"Left"     = c	: w		: !"/home/shed/Scripts/pillar/maximize.sh left&"
-"Up"       = c  : w		: !"/home/shed/Scripts/pillar/maximize.sh top&"
-"Down"     = c  : w		: !"/home/shed/Scripts/pillar/maximize.sh bottom&"
+"Right"    = c	: w		: !"$HOME/Scripts/pillar/maximize.sh right&"
+"Left"     = c	: w		: !"$HOME/Scripts/pillar/maximize.sh left&"
+"Up"       = c  : w		: !"$HOME/Scripts/pillar/maximize.sh top&"
+"Down"     = c  : w		: !"$HOME/Scripts/pillar/maximize.sh bottom&"
 
 #"F1"     = m|s : all : f.changesize "640x540"
-"F1"     = m|s : all : !"/home/shed/Scripts/pillar/maximize.sh small&"
+"F1"     = m|s : all : !"$HOME/Scripts/pillar/maximize.sh small&"
 #"F2"     = m|s : all : f.changesize "1280x1080"
-"F2"     = m|s : all : !"/home/shed/Scripts/pillar/maximize.sh large&"
-"F3"     = m|s : all : !"/home/shed/Scripts/pillar/maximize.sh tsr&"
+"F2"     = m|s : all : !"$HOME/Scripts/pillar/maximize.sh large&"
+"F3"     = m|s : all : !"$HOME/Scripts/pillar/maximize.sh tsr&"
 "F11"     = : w : f.fullscreenzoom
 #"M"     = m : w : f.iconify
 "B"     = m : w : f.raiselower
-#!"/home/shed/Scripts/pillar/maximize.sh max&"
-"X"     = m : w : !"/home/shed/Scripts/pillar/maximize.sh max&"
-"C"     = m : w : !"/home/shed/Scripts/pillar/maximize.sh cust&"
+#!"$HOME/Scripts/pillar/maximize.sh max&"
+"X"     = m : w : !"$HOME/Scripts/pillar/maximize.sh max&"
+"C"     = m : w : !"$HOME/Scripts/pillar/maximize.sh cust&"
 "X"    =      mod4 : w : f.raiselower
 #"F11"     = : w : f.changesize "1920x1080"
 "F12"   =      c : all   : f.fullzoom
@@ -925,7 +922,7 @@ Button1 =	: f		: f.function "raise-and-resize"
 "F10" = : "sakura" : f.raise
 #"F10" = c : w : f.setpriority "1"
 #"F10" = m : w : f.setpriority "0"
-"F10" = mod3 : w : !"/home/shed/Scripts/pillar/aot.sh&"
+"F10" = mod3 : w : !"$HOME/Scripts/pillar/aot.sh&"
 
 #SloppyFocus
 ClickToFocus            # Prevent mouse movement changing focus
