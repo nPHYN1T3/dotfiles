@@ -32,7 +32,7 @@ PixmapDirectory          "$HOME/.local/share/icons/m0dw3rks/xpm"
 
 Pixmaps
 {
-#    TitleHighLight "xpm:titlebar.xpm"
+#    TitleHighLight "xpm:window-controls/black/titlebar.xpm"
 }
 
 #---------------------------------------------------------
