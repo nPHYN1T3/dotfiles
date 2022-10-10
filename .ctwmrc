@@ -30,10 +30,10 @@ WorkSpaceFont	 "-*-terminus-*-r-normal-*-20-*-*-*-*-*-*-*"
 #PixmapDirectory          "/usr/share/pixmaps/"	# dir. for xpms
 PixmapDirectory          "$HOME/.local/share/icons/m0dw3rks/xpm"
 
-Pixmaps
-{
-#    TitleHighLight "xpm:window-controls/black/titlebar.xpm"
-}
+#Pixmaps
+#{
+#TitleHighLight "xpm:window-controls/black/titlebar.xpm"
+#}
 
 #---------------------------------------------------------
 # COLOR CONFIG and COLORS                                          
@@ -106,14 +106,18 @@ Monochrome
 # GENERAL CTWM CONFIG                                         
 #---------------------------------------------------------
 
+DontShowWelcomeWindow			# Hide silly splash
 RestartPreviousState			# use previous if any
 CenterFeedbackWindow			# move pos.info to center
 
 DecorateTransients			# give transients TB
-TransientHasOccupation			# ..uhh? Try it! What is it?
-TransientOnTop				# Put transients top when they appear 
+#TransientHasOccupation		# ..uhh? Try it! What is it?
+TransientOnTop				# Put transients top when they appear
+AutoFocusToTransients		# Help kbd instantiated windows get focus
 
 IconifyStyle				"sweep"
+IconifyByUnmapping			#DontIconifyByUnmapping ## show hide icons when applications are iconified
+Zoom						"24"
 
 WarpRingOnScreen			# only warp on current workspace # Enable Alt+Tab type window circulation
 WarpUnmapped				# deiconfity unmapped and warp
@@ -121,17 +125,17 @@ WarpUnmapped				# deiconfity unmapped and warp
 DontMoveOff					# Add below & U get resistance
 MoveOffResistance	  		"-1"		# ahow hard must I push?
 
-ConstrainedMoveTime       0		# How quick to 2click to constrain
+ConstrainedMoveTime       "0"		# How quick to 2click to constrain
 XMoveGrid 64
 YMoveGrid 32
 
-MoveDelta                 3		# dist. 4 move 2 work
-AnimationSpeed            12		# update speed for animated things
-ClearShadowContrast       50		# clear shadow for 3D
-DarkShadowContrast        50		# dark shadow for 3D
-MovePackResistance        44		# how many pix. res. be4 overlap?
+MoveDelta                 "3"		# dist. 4 move 2 work
+AnimationSpeed            "12"		# update speed for animated things
+ClearShadowContrast       "50"		# clear shadow for 3D
+DarkShadowContrast        "50"		# dark shadow for 3D
+MovePackResistance        "44"		# how many pix. res. be4 overlap?
 
-MaxWindowSize		  "5760x1080" # default
+MaxWindowSize			  "5760x1080" # default
 
 
 NoStackMode				# ignore stacking reqs from clients
@@ -155,8 +159,8 @@ SqueezeTitle			# shrinks titlebar # BeOS Style or "Normal"
 TitleButtonShadowDepth		0
 TitleShadowDepth			0
 TitleButtonBorderWidth		0
-TitlePadding				0		# frame around TBobjects?
-ButtonIndent				0		# indentated TBbuttons?		
+TitlePadding				2		# frame around TBobjects?
+ButtonIndent				2		# indentated TBbuttons?		
 FramePadding				0		# frame around TB?
 TitleJustification			"left"	# right/left/center
 
@@ -164,12 +168,15 @@ TitleJustification			"left"	# right/left/center
 #RightTitleButton           "xpm:resize.xpm"    = f.resize
 #RightTitleButton           "xpm:window-controls/black/verexp.xpm"    = f.zoom
 #RightTitleButton           "xpm:window-controls/black/horexp.xpm"    = f.hzoom
-RightTitleButton           "xpm:window-controls/black/minimize.xpm"      = f.iconify
-RightTitleButton           "xpm:window-controls/black/maximize.xpm"      = f.fullzoom
-RightTitleButton           "xpm:window-controls/black/close.xpm"         = f.delete
+LeftTitleButton           "xpm:window-controls/black/close.xpm"         = f.delete
+LeftTitleButton           "xpm:window-controls/black/maximize.xpm"      = f.fullzoom
+LeftTitleButton           "xpm:window-controls/black/minimize.xpm"      = f.iconify
+LeftTitleButton           "xpm:window-controls/black/behind.xpm"      = f.raiselower
 
-NoTitle 
+NoTitle
 #{
+##"Notepadqq"
+##"spacefm"
 #"pavucontrol"
 #"qjackctl"
 #"sxiv"
@@ -182,14 +189,53 @@ NoTitle
 #"brave"
 #"Pale Moon"
 #"waterfox"
-#"librewolf"
+#"LibreWolf"
 #"sakura"
-##"icecat"
-##"firefox"
-##"falkon"
+#"icecat"
+#"firefox"
+#"falkon"
 #"TWM Icon Manager"
 #"WorkSpaceManager"
 #}
+
+#---------------------------------------------------------
+# ICON MANAGER CONFIG
+#---------------------------------------------------------
+
+#ShowIconManager				# activate/deactivate IM
+# Icon Manager Geometry:  Size:       Columns:
+IconManagerGeometry       "64x1080+0+0" 1
+UseThreeDIconManagers
+SortIconManager				# sorts alphabetically
+#NoCaseSensitive			# sort with case?
+NoIconTitle				# don't put title under icons
+#NoIconManagers
+IconManagerDontShow
+{
+    "tint2"
+    "rofi"
+    "panel"
+} 
+
+NoHighLight
+{					# optional winlist. no list = no hl
+    "TWM Icon Manager"
+    "WorkSpaceManager"
+	"tint2"
+	"panel"
+}
+
+UnknownIcon      "xpm:unknown.xpm"
+ForceIcons
+Icons
+{
+  "Sakura"			"xpm:sakura.xpm"
+  "Brave"			"xpm:brave.xpm"
+  "SpaceFM"			"xpm:spacefm.xpm"
+  "Leafpad"			"xpm:leafpad.xpm"
+  "Featherpad"		"xpm:featherpad.xpm"
+  "Palemoon"		"xpm:palemoon.xpm"
+}
 
 #---------------------------------------------------------
 # BORDER CONFIG
@@ -460,22 +506,6 @@ ForceFocus
 "YAD"
 }
 
-#NoIconManagers
-IconManagerDontShow
-{
-    "tint2"
-    "rofi"
-    "panel"
-} 
-
-NoHighLight
-{					# optional winlist. no list = no hl
-    "TWM Icon Manager"
-    "WorkSpaceManager"
-	"tint2"
-	"panel"
-}   
-
 OccupyAll 
 {
     "TWM Icon Manager"
@@ -562,7 +592,7 @@ Function "ws-move-vanish6"		{ f.toggleoccupation "workspace6" f.vanish }
 Button1		= mod3	: w			: f.move
 Button1		= m		: w			: f.function "raise-and-resize"
 Button1		=		: t			: f.function "raise-move"
-Button1		= m1	: title		: f.movetitlebar # BeOS style title drag
+Button1		= s	: title		: f.movetitlebar # BeOS style title drag
 
 #---------------------------------------------------------
 # KEY FUNCTIONS
@@ -632,9 +662,9 @@ RaiseOnClickButton 1    # When clicked with button 1, that is.
 UsePPosition			"on"		# Help kbd instantiated windows get focus # let the apps have their way?
 
 RandomPlacement			"on" "+1920+0"		# ask for pos? # Help kbd instantiated windows get focus
-AutoFocusToTransients   # Help kbd instantiated windows get focus
 SaveWorkspaceFocus      # Obviously workspace focus should be retained
 
 IgnoreCaseInMenuSelection # Make menus much easier via keyboard
 ShortAllWindowsMenus    # Don't show iconmgr and workspace mgr in lists # Don't show IM and WSM in win.menu
+
 
