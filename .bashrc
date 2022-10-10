@@ -45,9 +45,3 @@ fi
 . "$HOME/.cargo/env"
 
 source $HOME/Documents/Scripts/to.sh
-
-#source $HOME/.bourne-apparix
-#bind '"\t":menu-complete'
-
-# source $HOME/Documents/Scripts/$HOSTNAME/rpg-cli.sh
-
