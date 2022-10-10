@@ -27,6 +27,3 @@ mkdir -p /tmp/logs
 touch /tmp/logs/session.log
 
 $HOME/Scripts/$HOSTNAME/launchers/ctwm.sh >> /tmp/logs/session.log 2>&1
-#exec ctwm >> /tmp/logs/session.log 2>&1
-
-#$HOME/Scripts/pillar/launchers/ctwm.sh
