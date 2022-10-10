@@ -46,18 +46,18 @@
 #"sakura"
 #  control + alt + t
 
-#"/home/shed/Scripts/launcher.sh"
+#"$HOME/Scripts/launcher.sh"
 #  Mod2 + space
 #  c:41 + m:0x4
 
-"/home/shed/Scripts/pillar/xy_launch.sh e"
+"$HOME/Scripts/$HOSTNAME/xy_launch.sh e"
   Mod2 + e
 
-#"/home/shed/Scripts/pillar/xy_launch.sh t"
+#"$HOME/Scripts/$HOSTNAME/xy_launch.sh t"
 #  Mod2 + t
 
 # specify a mouse button
-"/home/shed/Scripts/pillar/xy_launch.sh t"
+"$HOME/Scripts/$HOSTNAME/xy_launch.sh t"
   control + b:2
 
 #"xterm -geom 50x20+20+20"
