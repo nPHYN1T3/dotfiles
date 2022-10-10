@@ -15,7 +15,7 @@ unset MAILCHECK
 
 PS1="\[\e[0;33m\]\u\[\e[0;31m\]:\[\e[0;33m\]\#\[\e[0;31m\]@\[\e[0;33m\]\H\[\e[0;31m\]:\[\e[0;33m\]\W\[\e[0;37m\]$ \[\e[0m\]"
 
-EDITOR=/usr/bin/vi
+EDITOR=/usr/bin/nvim
 
 MAIL=""
 
