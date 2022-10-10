@@ -27,10 +27,12 @@ WorkSpaceFont	 "-*-terminus-*-r-normal-*-20-*-*-*-*-*-*-*"
 # PIXMAP CONFIG and PIXMAPS
 #---------------------------------------------------------
 
-PixmapDirectory          "/usr/share/pixmaps/"	# dir. for xpms
+#PixmapDirectory          "/usr/share/pixmaps/"	# dir. for xpms
+PixmapDirectory          "$HOME/.local/share/icons/m0dw3rks/xpm"
 
 Pixmaps
 {
+#    TitleHighLight "xpm:titlebar.xpm"
 }
 
 #---------------------------------------------------------
@@ -41,17 +43,19 @@ Pixmaps
 
 Color
 {
-BorderColor           "#FFB600" {
-"Pale Moon" "#445334"
-"Brave" "#FF6800"
-"Waterfox" "#88AFFF"
-"librewolf" "#AAAAAA"
-#"sakura" "#FFFF00"
-"VirtualBox" "#6868FF"
-"fsearch" "#00FF00"
-"klogg" "#AA00FF"
-"audacious" "#FF8800"
-"gnome-system-monitor" "#FF0000"
+BorderColor		"#FFB600"
+{
+"Pale Moon"				"#445334"
+"Brave"					"#FF6800"
+"Tor"					"#AA00FF"
+"Waterfox"				"#88AFFF"
+"librewolf"				"#AAAAAA"
+#"sakura"				"#FFFF00"
+"VirtualBox"			"#6868FF"
+"fsearch"				"#00FF00"
+"klogg"					"#AA00FF"
+"audacious"				"#FF8800"
+"gnome-system-monitor"	"#FF0000"
 }
   DefaultBackground     "#242424"
   DefaultForeground     "#CACACA"
@@ -87,11 +91,11 @@ SaveColor					# tell client about these
 
 Monochrome
 {
-	BorderColor 		"black"
+	BorderColor 			"black"
 	BorderTileForeground 	"black"
 	BorderTileBackground 	"white"
-	TitleForeground 	"black"
-	TitleBackground 	"white"
+	TitleForeground 		"black"
+	TitleBackground 		"white"
 	MenuTitleForeground 	"black"
 	MenuTitleBackground 	"white"
 	MapWindowForeground 	"white"
@@ -109,13 +113,13 @@ DecorateTransients			# give transients TB
 TransientHasOccupation			# ..uhh? Try it! What is it?
 TransientOnTop				# Put transients top when they appear 
 
-IconifyStyle		"sweep"
+IconifyStyle				"sweep"
 
 WarpRingOnScreen			# only warp on current workspace # Enable Alt+Tab type window circulation
 WarpUnmapped				# deiconfity unmapped and warp
 
-DontMoveOff				# Add below & U get resistance
-MoveOffResistance	  "-1"		# ahow hard must I push?
+DontMoveOff					# Add below & U get resistance
+MoveOffResistance	  		"-1"		# ahow hard must I push?
 
 ConstrainedMoveTime       0		# How quick to 2click to constrain
 XMoveGrid 64
@@ -142,45 +146,74 @@ RaiseWhenAutoUnSqueeze
 
 UseThreeDTitles
 NoDefaults				# not use default buttons
+#MakeTitle
 
-#SqueezeTitle				# shrinks titlebar # BeOS Style or "Normal"
-#{					# optional winlist
+SqueezeTitle			# shrinks titlebar # BeOS Style or "Normal"
+#{						# optional winlist
 #}
 
-Button1 = m1 : title : f.movetitlebar # BeOS style title drag
-
-TitleButtonShadowDepth    0
-TitleShadowDepth          0
-TitleButtonBorderWidth    0
-TitlePadding              0		# frame around TBobjects?
-ButtonIndent              0		# indentated TBbuttons?		
-FramePadding		  0		# frame around TB?
-TitleJustification        "left"	# right/left/center
+TitleButtonShadowDepth		0
+TitleShadowDepth			0
+TitleButtonBorderWidth		0
+TitlePadding				0		# frame around TBobjects?
+ButtonIndent				0		# indentated TBbuttons?		
+FramePadding				0		# frame around TB?
+TitleJustification			"left"	# right/left/center
 
 
 #RightTitleButton           "xpm:resize.xpm"    = f.resize
-RightTitleButton           "xpm:verexp.xpm"    = f.zoom
-#RightTitleButton           "xpm:horexp.xpm"    = f.hzoom
+#RightTitleButton           "xpm:window-controls/black/verexp.xpm"    = f.zoom
+#RightTitleButton           "xpm:window-controls/black/horexp.xpm"    = f.hzoom
+RightTitleButton           "xpm:window-controls/black/minimize.xpm"      = f.iconify
+RightTitleButton           "xpm:window-controls/black/maximize.xpm"      = f.fullzoom
+RightTitleButton           "xpm:window-controls/black/close.xpm"         = f.delete
 
-#---------------------------------------------------------
-# Sounds
-#---------------------------------------------------------
-
-#RplaySounds
+NoTitle 
 #{
-#"KeyPress" "$HOME/Desktop/test.wav"
-#"FocusIn" "$HOME/Desktop/test.wav"
+#"pavucontrol"
+#"qjackctl"
+#"sxiv"
+#"geany"
+#"audacious"
+#"deadbeef"
+#"fsearch"
+#"ravenfield"
+#"Escape From Tarkov"
+#"brave"
+#"Pale Moon"
+#"waterfox"
+#"librewolf"
+#"sakura"
+##"icecat"
+##"firefox"
+##"falkon"
+#"TWM Icon Manager"
+#"WorkSpaceManager"
 #}
-
 
 #---------------------------------------------------------
 # BORDER CONFIG
 #---------------------------------------------------------
 
 UseThreeDBorders
-ThreeDBorderWidth         2
-Borderwidth               2
+ThreeDBorderWidth         0
+Borderwidth               0
 BorderShadowDepth         0
+
+NoBorder
+#{
+##"brave"
+##"Pale Moon"
+##"waterfox"
+##"icecat"
+##"firefox"
+##"falkon"
+##"TWM Icon Manager"
+##"WorkSpaceManager"
+#"mpv"
+#"ravenfield"
+#"Escape From Tarkov"
+#}
 
 #---------------------------------------------------------
 # WORKSPACE MANAGER CONFIG COLORS AND NAMES                              
@@ -342,7 +375,7 @@ menu "dev"
 menu "system"
 {
 	"Baobab"				!"env GTK_THEME=Adwaita:dark baobab&"
-	"FS-Lint"				!"fslint-gui&"	
+	"Shredder"				!"rmlint --gui&"	
 	"Stacer"				!"Stacer-1.1.0-x64.AppImage&"	
 	"Mime-Editor"			!"env GTK_THEME=Adwaita:dark baobab&"	
 	"VirtualBox"			!"VirtualBox&"
@@ -427,6 +460,7 @@ ForceFocus
 "YAD"
 }
 
+#NoIconManagers
 IconManagerDontShow
 {
     "tint2"
@@ -438,26 +472,27 @@ NoHighLight
 {					# optional winlist. no list = no hl
     "TWM Icon Manager"
     "WorkSpaceManager"
+	"tint2"
+	"panel"
 }   
 
 OccupyAll 
 {
+    "TWM Icon Manager"
+    "WorkSpaceManager"
     "tint2"
     "panel"
-#    "pavucontrol"
-#     "qjackctl"
 }
 
 AlwaysOnTop
 {
 #     "vlc"
 #     "VLC media player"
-#     "qjackctl"
-     "trayer"
-     "panel"
-#     "TWM Icon Manager"
-#     "WorkSpaceManager"
-     "tint2"
+	"trayer"
+	"panel"
+	"TWM Icon Manager"
+	"WorkSpaceManager"
+	"tint2"
 }
 
 OnTopPriority 0 {
@@ -465,22 +500,6 @@ OnTopPriority 0 {
 #"Waterfox"
 }
 
-NoTitle 
-#{
-#}
-
-NoBorder
-{
-#"brave"
-#"Pale Moon"
-#"waterfox"
-#"icecat"
-#"firefox"
-#"falkon"
-#"TWM Icon Manager"
-#"WorkSpaceManager"
-"ravenfield"
-}
 
 Occupy # always move this app. to the same workspace?
 {
@@ -507,16 +526,17 @@ Occupy # always move this app. to the same workspace?
           Window          "qjackctl"   {"workspace2"}
 }
 
-WindowRing 				# which windows to use when warping
+WindowRing 			# which windows to use when warping
 #{					# if you don't list any windows  
 #}
 
 WindowRingExclude			# Don't include these windows i warp
 {
+	"trayer"
 	"panel"
-	"tint2"
 	"TWM Icon Manager"
 	"WorkSpaceManager"
+	"tint2"
 }
 
 DontWarpCursorInWMap
@@ -525,6 +545,7 @@ DontWarpCursorInWMap
 # FUNCTION DEFINITIONS                                   
 #---------------------------------------------------------
 
+Function "raise-move"          { f.raise f.deltastop f.focus f.deltastop f.forcemove }
 Function "raise-and-resize"		{ f.raise f.deltastop f.resize }
 Function "ws-move-vanish1"		{ f.toggleoccupation "workspace1" f.vanish }
 Function "ws-move-vanish2"		{ f.toggleoccupation "workspace2" f.vanish }
@@ -537,12 +558,11 @@ Function "ws-move-vanish6"		{ f.toggleoccupation "workspace6" f.vanish }
 # MOUSE BUTTON FUNCTIONS
 # BUTTONS	: CONTEXT	: FUNCTION            
 #---------------------------------------------------------
-"0xff67" = : all		: f.menu "Menus"
-#Button1 = : root		: f.menu "Menus"
-#Button3 = c : w		: f.menu "windows" # enable wm context on middle mouse
-#Button3 = : root		: f.menu "windows"
-Button1 = mod3 : w		: f.move
-Button1 =	: f			: f.function "raise-and-resize"
+"0xff67"	=		: all		: f.menu "Menus"
+Button1		= mod3	: w			: f.move
+Button1		= m		: w			: f.function "raise-and-resize"
+Button1		=		: t			: f.function "raise-move"
+Button1		= m1	: title		: f.movetitlebar # BeOS style title drag
 
 #---------------------------------------------------------
 # KEY FUNCTIONS
@@ -567,51 +587,51 @@ Button1 =	: f			: f.function "raise-and-resize"
 "6" = c|s : w : f.function "ws-move-vanish6"
 "0" = c|s : w : f.occupy
 
-"0xff61"		= mod3 : all        	: !"$HOME/Documents/Scripts/$HOSTNAME/screenshot.sh sa&"
-"0xff61"		= c : all				: !"$HOME/Documents/Scripts/$HOSTNAME/screenshot.sh&"
-"0xff61"		= c|mod4 : all			: !"$HOME/Documents/Scripts/$HOSTNAME/screenshot.sh sw&"
-"E"				= mod4 : all			: !"$HOME/Scripts/$HOSTNAME/xy_launch.sh e &"
-"Delete"     	= c|m : all				: !"gnome-system-monitor&"
-"R"				= mod4 : all			: !"launcher&"
-"0x20"			= mod4 : all			: !"$HOME/Scripts/$HOSTNAME/space_runner.sh run&"
-"R"				= mod4 : all			: !"$HOME/Scripts/$HOSTNAME/space_runner.sh run&"
-"L"				= mod4 : all			: !"slock&"
-"T"				= c|m : all				: !"$HOME/Scripts/$HOSTNAME/xy_launch.sh t&"
-"M"				= c|m : all				: !"$HOME/Scripts/$HOSTNAME/xy_launch.sh m&"
-"W"				= mod4 : all			: !"rofi -show window&"
-"D"				= mod4 : all			: f.showbackground
-"0xff1b"		= c : w					: f.deleteordestroy # close window
-"V"				= c|s : all				: !"clipmenu&"
-"F9"			= m | c | s : all		: f.restart
-"Tab"			= m	: all				: f.warpring "next"
-"Tab"			= m|s : all				: f.warpring "prev"
-"Right"			= mod4 : w				: f.jumpright "6"
-"Left"			= mod4 : w				: f.jumpleft "6"
-"Up"			= mod4 : w				: f.jumpup "6"
-"Down"			= mod4 : w				: f.jumpdown "6"
-"Right"			= c	: w					: !"$HOME/Scripts/$HOSTNAME/maximize.sh right&"
-"Left"			= c	: w					: !"$HOME/Scripts/$HOSTNAME/maximize.sh left&"
-"Up"			= c : w					: !"$HOME/Scripts/$HOSTNAME/maximize.sh top&"
-"Down"			= c : w					: !"$HOME/Scripts/$HOSTNAME/maximize.sh bottom&"
-"F1"			= m|s : all 			: !"$HOME/Scripts/$HOSTNAME/maximize.sh small&"
-"F2"			= m|s : all 			: !"$HOME/Scripts/$HOSTNAME/maximize.sh large&"
-"F3"			= m|s : all 			: !"$HOME/Scripts/$HOSTNAME/maximize.sh tsr&"
-"F11"			= : w 					: f.fullscreenzoom
-"B"				= m : w 				: f.raiselower
-"X"				= m : w 				: !"$HOME/Scripts/$HOSTNAME/maximize.sh max&"
-"C"				= m : w 				: !"$HOME/Scripts/$HOSTNAME/maximize.sh cust&"
-"X"				= mod4 : w 				: f.raiselower
-"F12"			= c : all   			: f.fullzoom
-"F10"			= : "sakura" 			: f.raise
-"F10"			= mod3 : w 				: !"$HOME/Scripts/$HOSTNAME/aot.sh&"
+"0xff61"		= mod3		: all        	: !"$HOME/Documents/Scripts/$HOSTNAME/screenshot.sh sa&"
+"0xff61"		= c			: all			: !"$HOME/Documents/Scripts/$HOSTNAME/screenshot.sh&"
+"0xff61"		= c|mod4	: all			: !"$HOME/Documents/Scripts/$HOSTNAME/screenshot.sh sw&"
+"E"				= mod4 		: all			: !"$HOME/Scripts/$HOSTNAME/xy_launch.sh e &"
+"Delete"     	= c|m 		: all			: !"gnome-system-monitor&"
+"R"				= mod4		: all			: !"launcher&"
+"0x20"			= mod4		: all			: !"$HOME/Scripts/$HOSTNAME/space_runner.sh run&"
+"R"				= mod4		: all			: !"$HOME/Scripts/$HOSTNAME/space_runner.sh run&"
+"L"				= mod4		: all			: !"slock&"
+"T"				= c|m 		: all			: !"$HOME/Scripts/$HOSTNAME/xy_launch.sh t&"
+"M"				= c|m		: all			: !"$HOME/Scripts/$HOSTNAME/xy_launch.sh m&"
+"W"				= mod4		: all			: !"rofi -show window&"
+"D"				= mod4		: all			: f.showbackground
+"0xff1b"		= c			: w				: f.deleteordestroy # close window
+"V"				= c|s		: all			: !"clipmenu&"
+"F9"			= m | c | s : all			: f.restart
+"Tab"			= m			: all			: f.warpring "next"
+"Tab"			= m|s		: all			: f.warpring "prev"
+"Right"			= mod4		: w				: f.jumpright "6"
+"Left"			= mod4		: w				: f.jumpleft "6"
+"Up"			= mod4		: w				: f.jumpup "6"
+"Down"			= mod4		: w				: f.jumpdown "6"
+"Right"			= c			: w				: !"$HOME/Scripts/$HOSTNAME/maximize.sh right&"
+"Left"			= c			: w				: !"$HOME/Scripts/$HOSTNAME/maximize.sh left&"
+"Up"			= c			: w				: !"$HOME/Scripts/$HOSTNAME/maximize.sh top&"
+"Down"			= c			: w				: !"$HOME/Scripts/$HOSTNAME/maximize.sh bottom&"
+"F1"			= m|s		: all 			: !"$HOME/Scripts/$HOSTNAME/maximize.sh small&"
+"F2"			= m|s		: all 			: !"$HOME/Scripts/$HOSTNAME/maximize.sh large&"
+"F3"			= m|s		: all 			: !"$HOME/Scripts/$HOSTNAME/maximize.sh tsr&"
+"F11"			=			: w 			: f.fullscreenzoom
+"B"				= m			: w 			: f.raiselower
+"X"				= m			: w 			: !"$HOME/Scripts/$HOSTNAME/maximize.sh max&"
+"C"				= m			: w 			: !"$HOME/Scripts/$HOSTNAME/maximize.sh cust&"
+"X"				= mod4		: w 			: f.raiselower
+"F12"			= c			: all   		: f.fullzoom
+"F10"			=			: "sakura" 		: f.raise
+"F10"			= mod3		: w 			: !"$HOME/Scripts/$HOSTNAME/aot.sh&"
 
 #SloppyFocus
 ClickToFocus            # Prevent mouse movement changing focus
 RaiseOnClick            # Window rises when clicked
 RaiseOnClickButton 1    # When clicked with button 1, that is.
-UsePPosition 		  "on"		# Help kbd instantiated windows get focus # let the apps have their way?
+UsePPosition			"on"		# Help kbd instantiated windows get focus # let the apps have their way?
 
-#RandomPlacement          "on"		# ask for pos? # Help kbd instantiated windows get focus
+RandomPlacement			"on" "+1920+0"		# ask for pos? # Help kbd instantiated windows get focus
 AutoFocusToTransients   # Help kbd instantiated windows get focus
 SaveWorkspaceFocus      # Obviously workspace focus should be retained
 
