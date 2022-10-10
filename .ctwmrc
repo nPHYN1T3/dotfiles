@@ -111,7 +111,7 @@ RestartPreviousState			# use previous if any
 CenterFeedbackWindow			# move pos.info to center
 
 DecorateTransients			# give transients TB
-#TransientHasOccupation		# ..uhh? Try it! What is it?
+#TransientHasOccupation
 TransientOnTop				# Put transients top when they appear
 AutoFocusToTransients		# Help kbd instantiated windows get focus
 
