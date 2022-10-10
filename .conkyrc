@@ -70,7 +70,7 @@ ${alignc}${color FF0000}${font :size= 12}Ryzen 7 2700X${offset 20}$cpu%${offset 
 ${alignc}${color 464646}${cpubar cpu0 6,28 #FF0000 #FFFF00} ${cpubar cpu1 6,28 #FF0000 #FFFF00} ${cpubar cpu2 6,28 #FF0000 #FFFF00} ${cpubar cpu3 6,28 #FF0000 #FFFF00} ${cpubar cpu4 6,28 #FF0000 #FFFF00} ${cpubar cpu5 6,28 #FF0000 #FFFF00} ${cpubar cpu6 6,28 #FF0000 #FFFF00} ${cpubar cpu7 6,28 #FF0000 #FFFF00} ${cpubar cpu8 6,28 #FF0000 #FFFF00} ${cpubar cpu9 6,28 #FF0000 #FFFF00} ${cpubar cpu10 6,28 #FF0000 #FFFF00} ${cpubar cpu11 6,28 #FF0000 #FFFF00} ${cpubar cpu12 6,28 #FF0000 #FFFF00} ${cpubar cpu13 6,28 #FF0000 #FFFF00} ${cpubar cpu14 6,28 #FF0000 #FFFF00} ${cpubar cpu15 6,28 #FF0000 #FFFF00}
 ${alignc}${color 222222}${cpugraph 18,600  000000 FFC600}
 #				-- GPU's --
-${color CCCCCC}${font :size= 12}RAM $mem ${color 464646}${voffset 2}${membar 12,48}${goto 220}${color 22CF10}${exec $HOME/Scripts/pillar/nvTmps.sh 1660}${goto 400}${exec $HOME/Scripts/pillar/nvTmps.sh 1060}
+${color CCCCCC}${font :size= 12}RAM $mem ${color 464646}${voffset 2}${membar 12,48}${goto 220}${color 22CF10}${exec $HOME/Scripts/$HOSTNAME/nvTmps.sh 1660}${goto 400}${exec $HOME/Scripts/$HOSTNAME/nvTmps.sh 1060}
 #				-- RAM --#${color 0000FF}${font :size= 12}Swap${alignr}$swapperc% / $swapmax
 #${offset 4}${color 222222}${memgraph 12,600 FF8800 FFC600}
 #				-- HD --
