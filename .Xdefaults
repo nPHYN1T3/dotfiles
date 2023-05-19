@@ -1,23 +1,51 @@
-*background:  #080808
-*cursorColor:  #ffb600
-*foreground:  #cccccc
-*color0:  #000000
-*color1:  #cc0000
-*color2:  #00aa00
-*color3:  #ccaa00
-*color4:  #0000dc
-*color5:  #cc00bb
-*color6:  #00aabb
-*color7:  #e5c3d4
-*color8:  #7f5d6e
-*color9:  #fe0000
-*color10:  #00dc00
-*color11:  #fedc00
-*color12:  #5b39ed
-*color13:  #fe00ed
-*color14:  #00dced
-*color15:  #fedced
 
+! special colors
+*.foreground:  #585858
+*.background:  #121212
+*.cursorColor:  #ffa800
+! black
+*.color0:      #000000
+*.color8:      #040404
+! red
+*.color1:      #ff0000
+*.color9:      #550000
+! green
+*.color2:      #00ff00
+*.color10:     #007f00
+! yellow
+*.color3:      #ffff00
+*.color11:     #565600
+! blue
+*.color4:      #0000ff
+*.color12:     #00007f
+! magenta
+*.color5:      #ff00ff
+*.color13:     #ff007f
+! cyan
+*.color6:      #00aaff
+*.color14:     #004568
+! white
+*.color7:      #ffffff
+*.color15:     #878787
+
+URxvt*scrollBar:         false
+URxvt*scrollBar_right:   false
+
+URxvt*transparent:       true
+URxvt*shading:       10
+
+URxvt.font: xft:Hurmit Nerd Font Mono:pixelsize=16
+URxvt.letterSpace: 0
+
+*antialias:  true
+*autohint:   false
+
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: brave
+URxvt.matcher.button: 1
+
+
+URxvt*iconFile: /home/shed/.local/share/icons/m0dw3rks/apps/64/urxvt.png
 Sxiv.background: #080808
 Sxiv.foreground: #888888
 
