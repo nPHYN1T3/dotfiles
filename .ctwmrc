@@ -621,7 +621,8 @@ Function "ws-move-vanish6"		{ f.toggleoccupation "workspace6" f.vanish }
 "0xff67"	=		: all		: f.menu "Menus" # Show menu from keyboard menu key
 Button1		= mod3	: w			: f.move # Tab + m1 Click to move window in incremeneted steps defined by XMoveGrid X YMoveGrid X
 Button1		= mod4	: w			: f.function "raise-and-resize" #win + button1 because alt is used by blender
-Button1		=		: t			: f.function "raise-move" # M1 Click and hold title for move
+Button1		=		: frame		: f.resize
+Button1		=		: t		: f.function "raise-move" # M1 Click and hold title for move
 Button1		= s		: title		: f.movetitlebar # BeOS style title drag
 
 #---------------------------------------------------------
