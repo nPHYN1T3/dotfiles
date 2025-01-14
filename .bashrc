@@ -10,7 +10,7 @@ if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
 fi
 
-PATH=$PATH:$HOME/Scripts:$HOME/Scripts/$HOSTNAME:$HOME/Scripts/$HOSTNAME/launchers:$HOME/Scripts/$HOSTNAME/session:$HOME/.local/share/bin:/home/shed/.local/bin
+PATH=$PATH:$HOME/Scripts:$HOME/Scripts/$HOSTNAME:$HOME/Scripts/$HOSTNAME/launchers:$HOME/Scripts/$HOSTNAME/session:$HOME/.local/share/bin:/home/$(user)/.local/bin
 
 DYELLOW="\[$(tput setaf 214)\]"
 ORANGE="\[$(tput setaf 202)\]"
