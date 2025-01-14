@@ -2,7 +2,7 @@
 -- Config_Variables: http://conky.sourceforge.net/variables.html
 
 -- to trigger a refresh from command line
--- touch -m /home/shed/.conkyrc
+-- touch -m /home/$(user)/.conkyrc
 
 conky.config = {
 
@@ -64,17 +64,17 @@ conky.config = {
 };
 
 conky.text = [[
-#${image /home/shed/Scripts/pillar/launchers/term-logo.png -p 0,0 -s 48x48 -f 86400}
-${color CCCCCC}PILLAR ${exec uname -a | awk '{print $3}'} ${time %A, %B %d %Y %H:%M:%S} : $uptime
-${color FF0000}Ryzen 7 5700X ${color CCCCCC}$cpu% ${exec sensors | grep 'Tctl' | awk -F'+' '{print $2}' | xargs} ${execp /home/shed/Scripts/pillar/cpugov-conky.sh} ${color FF0000}Radeon RX 7600 XT ${color CCCCCC}${texeci 1.5 /home/shed/Scripts/pillar/amdgpu-conky.sh}
+#${image /home/$(user)/Scripts/$HOSTNAME/launchers/term-logo.png -p 0,0 -s 48x48 -f 86400}
+${color CCCCCC}$HOSTNAME ${exec uname -a | awk '{print $3}'} ${time %A, %B %d %Y %H:%M:%S} : $uptime
+${color FF0000}Ryzen 7 5700X ${color CCCCCC}$cpu% ${exec sensors | grep 'Tctl' | awk -F'+' '{print $2}' | xargs} ${execp /home/$(user)/Scripts/$HOSTNAME/cpugov-conky.sh} ${color FF0000}Radeon RX 7600 XT ${color CCCCCC}${texeci 1.5 /home/$(user)/Scripts/$HOSTNAME/amdgpu-conky.sh}
 ${color CCCCCC}${exec echo $(cat /proc/cpuinfo | grep MHz | awk '{ printf("%.2f ", $4*0.001) }')}
 ${color 464646}${cpubar cpu0 8,28 #FF0000 #FFFF00} ${cpubar cpu1 8,28 #FF0000 #FFFF00} ${cpubar cpu2 8,28 #FF0000 #FFFF00} ${cpubar cpu3 8,28 #FF0000 #FFFF00} ${cpubar cpu4 8,28 #FF0000 #FFFF00} ${cpubar cpu5 8,28 #FF0000 #FFFF00} ${cpubar cpu6 8,28 #FF0000 #FFFF00} ${cpubar cpu7 8,28 #FF0000 #FFFF00} ${cpubar cpu8 8,28 #FF0000 #FFFF00} ${cpubar cpu9 8,28 #FF0000 #FFFF00} ${cpubar cpu10 8,28 #FF0000 #FFFF00} ${cpubar cpu11 8,28 #FF0000 #FFFF00} ${cpubar cpu12 8,28 #FF0000 #FFFF00} ${cpubar cpu13 8,28 #FF0000 #FFFF00} ${cpubar cpu14 8,28 #FF0000 #FFFF00} ${cpubar cpu15 8,28 #FF0000 #FFFF00}
 ${color FFb600}RAM: $mem/$memmax $memperc% ${membar 12,340 #FF8800 #FFC600}
 #				-- HD --
 ${color FFB600}/ ${color CCCCCC}${diskio /dev/nvme0n1p2}${goto 100}${exec df -h | grep /dev/nvme0n1p2 | awk NR==1'{print $2,$5}'}${goto 200}${#464646}${fs_bar 12,82 /}${goto 300}${color FFB600}${color FFB600}tmp ${color CCCCCC}${diskio /tmp}${goto 400}${exec df -h | grep ' /tmp' | awk NR==1'{print $2,$5}'}${goto 500}${#464646}${fs_bar 12,82 /tmp}
 ${color 404040}${diskiograph_read /dev/nvme0n1p2 12,140 00FF00 002800}${diskiograph_write /dev/nvme0n1p2 12,140 FF0000 280000}${goto 300}${diskiograph_read /tmp 12,140 00FF00 002800}${diskiograph_write /tmp 12,140 FF0000 280000}
-${color FFB600}WIC ${color CCCCCC}${diskio /dev/md127p1}${goto 400}${exec df -h | grep /dev/md127p1 | awk '{print $2,$5}'}${goto 500}${#464646}${fs_bar 12,82 /home}${goto 300}${color FFB600}blufor ${color CCCCCC}${diskio /media/shed/blufor}${goto 100}${exec df -h | grep /media/shed/blufor | awk NR==1'{print $2,$5}'}${goto 200}${#464646}${fs_bar 12,82 /media/shed/blufor}
-${diskiograph_read /dev/md127p1 12,140 00FF00 002800}${diskiograph_write /dev/md127p1 12,140 FF0000 280000}${goto 300}${color 404040}${diskiograph_read /media/shed/blufor 12,140 00FF00 002800}${diskiograph_write /media/shed/blufor 12,140 FF0000 280000}${color 404040}
+${color FFB600}WIC ${color CCCCCC}${diskio /dev/md127p1}${goto 400}${exec df -h | grep /dev/md127p1 | awk '{print $2,$5}'}${goto 500}${#464646}${fs_bar 12,82 /home}${goto 300}${color FFB600}blufor ${color CCCCCC}${diskio /media/$(user)/blufor}${goto 100}${exec df -h | grep /media/$(user)/blufor | awk NR==1'{print $2,$5}'}${goto 200}${#464646}${fs_bar 12,82 /media/$(user)/blufor}
+${diskiograph_read /dev/md127p1 12,140 00FF00 002800}${diskiograph_write /dev/md127p1 12,140 FF0000 280000}${goto 300}${color 404040}${diskiograph_read /media/$(user)/blufor 12,140 00FF00 002800}${diskiograph_write /media/$(user)/blufor 12,140 FF0000 280000}${color 404040}
 #				-- INTERNET --▼▲
 ${color 00FF00}${font :size=8}DOWN ${downspeedf enp42s0}${goto 100}${downspeedgraph enp42s0 12,180 000000 00FF00}${goto 300}${color FF0000}UP ${upspeedf enp42s0}${goto 400}${upspeedgraph enp42s0 12,180 000000 FF0000}
 ]];
