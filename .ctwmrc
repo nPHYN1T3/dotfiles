@@ -6,29 +6,46 @@
 
 "F6" = s : r|w|t|m|f : f.twmrc  #shift "L2": source .ctwmrc
 
-#---------------------------------------------------------      
-# FONTS                                                 
+#---------------------------------------------------------
+# FONTS
 #---------------------------------------------------------
 #-*-fira sans-medium-r-*-*-*-*-*-*-*-*-*-*
-#"-adobe-helvetica-bold-r-normal--16*"
+#"-adobe-helvetica-bold-r-nformal--16*"
 #-*-fira sans-medium-r-*-*-17-*-100-100-*-*-ascii-*
 
-MenuFont 	"-adobe-helvetica-medium-r-*-*-16-*-*-*-*-*-*-*"
-#MenuFont    "-misc-fixed-medium-r-*-*-22-*-*-*-*-*-*-*"
-#MenuFont         "-*-terminus-*-r-normal-*-28-240-72-72-*-120-*-*"
-#MenuFont         "-misc-fira sans-*-r-*-*-14-*-100-100-*-*-ascii-*"
-TitleFont        "-*-terminus-*-r-normal-*-20-*-*-*-*-*-*-*"
-IconManagerFont  "-*-terminus-*-r-normal-*-20-*-*-*-*-*-*-*"
-IconFont		 "-*-terminus-*-r-normal-*-20-*-*-*-*-*-*-*"
-ResizeFont       "-*-terminus-*-r-normal-*-20-*-*-*-*-*-*-*"
-WorkSpaceFont	 "-*-terminus-*-r-normal-*-20-*-*-*-*-*-*-*"
+#TitleFont         "-*-fixed-medium-r-*-*-13-*-75-75-c-60-*-*"
+#TitleFont         ""-dec-terminal-medium-r-*-*-*-*-*-*-*-*-*-*"
+#TitleFont         "-*-dejavu sans mono-medium-r-normal--*-80-*-*-*-*-iso10646-1"
+#IconManagerFont  "-*-helvetica-medium-r-*-*-14-*-*-*-*-*-*-*"
+#IconFont		 "-*-helvetica-medium-r-*-*-14-*-*-*-*-*-*-*"
+#ResizeFont       "-*-helvetica-medium-r-*-*-14-*-*-*-*-*-*-*"
+#WorkSpaceFont	 "-*-helvetica-medium-r-*-*-14-*-*-*-*-*-*-*"
+
+#TitleFont "-misc-hellvetica-medium-r-normal-*-14-*-*-*-*-*-*-*"
+#TitleFont         "-*-dejavu sans mono-medium-r-normal--*-80-*-*-*-*-iso10646-1"
+#TitleFont         "-*-helvetica-bold-r-*-*-*-*-*-*-*-*-*-*"
+TitleFont         "-*-fixed-medium-*-*-*-15-*-*-*-*-*-*-*"
+MenuFont 	"-*-fixed-medium-*-*-*-15-*-*-*-*-*-*-*"
+IconManagerFont "-*-fixed-medium-*-*-*-15-*-*-*-*-*-*-*"
+IconFont "-*-fixed-medium-*-*-*-15-*-*-*-*-*-*-*"
+ResizeFont "-*-fixed-medium-*-*-*-15-*-*-*-*-*-*-*"
+WorkSpaceFont "-*-fixed-medium-*-*-*-15-*-*-*-*-*-*-*"
+
+#BSD Settings that don't seem to work
+#TitleFont         "-*-spleen-*-*-*-*-12-*-*-*-*-*-*-*"
+#MenuFont 	"-*-spleen-*-*-*-*-12-*-*-*-*-*-*-*"
+#IconManagerFont "-*-spleen-*-*-*-*-12-*-*-*-*-*-*-*"
+#IconFont "-*-spleen-*-*-*-*-12-*-*-*-*-*-*-*"
+#ResizeFont "-*-spleen-*-*-*-*-12-*-*-*-*-*-*-*"
+#WorkSpaceFont "-*-spleen-*-*-*-*-12-*-*-*-*-*-*-*"
+
 
 #---------------------------------------------------------
 # PIXMAP CONFIG and PIXMAPS
 #---------------------------------------------------------
 
 #PixmapDirectory          "/usr/share/pixmaps/"	# dir. for xpms
-PixmapDirectory          "/home/shed/.local/share/icons/m0dw3rks/xpm"
+PixmapDirectory          "$HOME/.local/share/icons/m0dw3rks/xpm"
 
 #Pixmaps
 #{
@@ -36,48 +53,111 @@ PixmapDirectory          "/home/shed/.local/share/icons/m0dw3rks/xpm"
 #}
 
 #---------------------------------------------------------
-# COLOR CONFIG and COLORS                                          
+# COLOR CONFIG and COLORS
 #---------------------------------------------------------
 
 #BeNiceToColorMap			# less col in shadows
 
 Color
 {
-BorderColor		"#FFB600"
-{
+BorderColor				"#FFA600" {
+" qtextpad"   "#41cd52"
+"pcmanfm-qt"   "#41cd52"
 "barrier"				"#FF0000"
-"Pale Moon"				"#445334"
+"deskflow"				"#FF0000"
+"Pale Moon"				"#778a99"
 "Brave"					"#FF6800"
 "Tor"					"#AA00FF"
 "Waterfox"				"#88AFFF"
-"librewolf"				"#AAAAAA"
-"sakura"				"#FFAF00"
-"urxvt"					"#6F8000"
+#"sakura"				"#FFAF00"
+"urxvt"					"#FF0000"
+"xterm"					"#FF0000"
+"st"					"#0e5f88"
+"spacefm"				"#49007a"
+"spacefm.Spacefm"		"#49007a"
 "VirtualBox"			"#6868FF"
 "fsearch"				"#00FF00"
-"klogg"					"#AA00FF"
+#"klogg"					"#AA00FF"
 "vlc"					"#FF6800"
+"VLC"					"#FF6800"
+"mpv"					"#420143"
 "audacious"				"#FF8800"
-"gnome-system-monitor"	"#FF0000"
+"vscodium"				"#0078d4"
+"m0dw3rks"				"#888888"
+"fsrv"					"#888888"
+"tv"					"#0000d7"
+"tlx"					"#0000d7"
+"archway"				"#7b8d32"
+"shanniwar"				"#1b0036"
+"shannifrag"			"#72008f"
+"rpi"					"#d70065"
+"opi"					"#ff8700"
+"z4g41"					"#37abc8"
+"m0d0n3"				"#0087e3"
+"m01"					"#ffda00"
+"bridge"				"#775738"
+"ewatch"				"#AAAAAA"
+"cornerstone"			"#A8A8A8"
+"Buddy List"			"#72008f"
 }
+BorderTileBackground  "#3F3F3F" {
+" qtextpad"   "#32993f"
+"pcmanfm-qt"   "#32993f"
+"barrier"				"#6F0000"
+"deskflow"				"#6F0000"
+"Pale Moon"				"#46515a"
+"Brave"					"#993e00"
+"Tor"					"#AA00FF"
+"Waterfox"				"#526999"
+#"sakura"				"#FFAF00"
+"urxvt"					"#680000"
+"xterm"					"#680000"
+"st"					"#0e5f88"
+"spacefm"				"#300050"
+"spacefm.Spacefm"		"#300050"
+"VirtualBox"			"#3e3e99"
+"fsearch"				"#006F00"
+#"klogg"					"#AA00FF"
+"vlc"					"#993e00"
+"VLC"					"#993e00"
+"mpv"					"#420143"
+"audacious"				"#995200"
+"vscodium"				"#005799"
+"m0dw3rks"				"#404040"
+"fsrv"					"#404040"
+"tv"					"#000067"
+"tlx"					"#000067"
+"archway"				"#384017"
+"shanniwar"				"#0f001f"
+"shannifrag"			"#350042"
+"rpi"					"#7a0039"
+"opi"					"#995100"
+"z4g41"					"#37abc8"
+"m0d0n3"				"#004f85"
+"m01"					"#998300"
+"bridge"				"#332518"
+"ewatch"				"#888888"
+"cornerstone"			"#686868"
+"Buddy List"			"#350042"
+}
+  BorderTileForeground  "#FFFF00"
   DefaultBackground     "#242424"
   DefaultForeground     "#CACACA"
-  TitleBackground       "#FFB600"
-  TitleForeground       "#000000" 
-  BorderTileBackground  "#2F2F2F"		# optional windowlist
+  TitleBackground       "#FFA600"
+  TitleForeground       "#000000"
   MenuBackground        "#121212"
-  MenuForeground        "#FFB600"
+  MenuForeground        "#FFA600"
   MenuTitleBackground   "black"
   MenuTitleForeground   "white"
   MenuShadowColor       "black"			# default is black
-  IconBackground        "#FFB600"
+  IconBackground        "#FFA600"
   IconForeground        "green"
   IconBorderColor       "black"
   IconManagerBackground "#121212"
   IconManagerForeground "#888888"
-  IconManagerHighlight  "#FFB600"
+  IconManagerHighlight  "#FFA600"
   MapWindowBackground   "black"			# BGcol for WSMwins
-  MapWindowForeground   "#FFB600"			# FGcol for WSMwins
+  MapWindowForeground   "#FFA600"			# FGcol for WSMwins
 }
 
 SaveColor					# tell client about these
@@ -106,52 +186,74 @@ Monochrome
 }
 
 #---------------------------------------------------------
-# GENERAL CTWM CONFIG                                         
+# GENERAL CTWM CONFIG
 #---------------------------------------------------------
 
+NoGrabServer
 DontShowWelcomeWindow			# Hide silly splash
 RestartPreviousState			# use previous if any
 CenterFeedbackWindow			# move pos.info to center
 
 DecorateTransients			# give transients TB
 #TransientHasOccupation
-TransientOnTop				# Put transients top when they appear
+TransientOnTop				100 # Put transients top when they appear
+UsePPosition				"on"				# Help kbd instantiated windows get focus
+RandomPlacement				"on" "+1920+0"		# ask for pos? # Help kbd instantiated windows get focus
 AutoFocusToTransients		# Help kbd instantiated windows get focus
 
 IconifyStyle				"sweep"
 IconifyByUnmapping			#DontIconifyByUnmapping ## show hide icons when applications are iconified
-Zoom						"24"
+Zoom						24
 
 WarpRingOnScreen			# only warp on current workspace # Enable Alt+Tab type window circulation
-WarpUnmapped				# deiconfity unmapped and warp
+WarpUnmapped				# deiconfiy unmapped and warp
 
 DontMoveOff					# Add below & U get resistance
-MoveOffResistance	  		"-1"		# ahow hard must I push?
+#MoveOffResistance	  		-1		# how hard must I push?
 
-ConstrainedMoveTime       "0"		# How quick to 2click to constrain
+WindowGeometries {			#affects transient dialogs too!
+"Navigator.mercury-default"		"1280x1080+640+0"
+"Navigator.Waterfox-left"		"1280x1080+3840+0"
+"Navigator.librewolf"			"1280x1080+1920+0"
+"Navigator.Tor Browser"			"1280x1080+2560+0"
+"Workout System"				"1280x540+640+0"
+"m0dmail"						"1280x540+640+540"
+"steamwebhelper"				"1280x800+3840+280"
+"Shotcut"						"5760x1080+0+0"
+"inkscape"						"3256x1080+1864+0"
+#"Unity"						"5120x1080+0+0"
+#"Unity.Unity"					"5120x1080+0+0"
+"Buddy List"					"250x405+3840+608"
+"qmmp"							"1920x1080+0+0"
+"Audacious"						"1920x1080+1920+0"
+#"Textosaurus"   "1280x1080+3840+0"
+}
+
+ConstrainedMoveTime       0		# How quick to 2click to constrain
 XMoveGrid 64
 YMoveGrid 32
 
-MoveDelta                 "3"		# dist. 4 move 2 work
-AnimationSpeed            "12"		# update speed for animated things
-ClearShadowContrast       "50"		# clear shadow for 3D
-DarkShadowContrast        "50"		# dark shadow for 3D
-MovePackResistance        "44"		# how many pix. res. be4 overlap?
+MoveDelta                 4		# dist. 4 move 2 work
+AnimationSpeed            12		# update speed for animated things
+ClearShadowContrast       50		# clear shadow for 3D
+DarkShadowContrast        50		# dark shadow for 3D
+MovePackResistance        64		# how many pix. res. be4 overlap?
 
 MaxWindowSize			  "5760x1080" # default
 
 DontSetInactive {
 "Unity"
+"Steam"
+"Moonring"
+"sc2_x64.exe.sc2_x64.exe"
 }
 
-NoStackMode				# ignore stacking reqs from clients
-#{
-#}
+#NoStackMode	{}			# ignore stacking reqs from clients
 
 RaiseWhenAutoUnSqueeze
 
 #---------------------------------------------------------
-# TITLEBAR CONFIG and BUTTONS                                          
+# TITLEBAR CONFIG and BUTTONS
 #---------------------------------------------------------
 
 UseThreeDTitles
@@ -165,9 +267,9 @@ SqueezeTitle			# shrinks titlebar # BeOS Style or "Normal"
 TitleButtonShadowDepth		0
 TitleShadowDepth			0
 TitleButtonBorderWidth		0
-TitlePadding				2		# frame around TBobjects?
-ButtonIndent				2		# indentated TBbuttons?		
-FramePadding				0		# frame around TB?
+TitlePadding				0		# frame around TBobjects?
+ButtonIndent				0		# indentated TBbuttons?
+FramePadding				2		# frame around TB?
 TitleJustification			"left"	# right/left/center
 
 
@@ -175,12 +277,55 @@ TitleJustification			"left"	# right/left/center
 #RightTitleButton           "xpm:window-controls/black/verexp.xpm"    = f.zoom
 #RightTitleButton           "xpm:window-controls/black/horexp.xpm"    = f.hzoom
 LeftTitleButton           "xpm:window-controls/black/close.xpm"         = f.delete
-LeftTitleButton           "xpm:window-controls/black/maximize.xpm"      = f.fullzoom
+RightTitleButton           "xpm:window-controls/black/maximize.xpm"      = f.fullzoom
 #LeftTitleButton           "xpm:window-controls/black/minimize.xpm"      = f.iconify
 #LeftTitleButton           "xpm:window-controls/black/behind.xpm"      = f.raiselower
 
 NoTitle
 {
+"Chromium"
+"tmux-dual.URxvt"
+"tmux-quad.URxvt"
+"tmux-hex.URxvt"
+"tmux.sh"
+"Cromite"
+"noT"
+"noBT"
+"Textosaurus"
+"Torchlight"
+"sir.sir"
+"SirYouAreBeingHunted"
+"PartyHardGame"
+"Shotcut"
+"Duskers"
+"N/A"
+"Left 4 Dead 2"
+"HitmanPro.HitmanPro"
+"HITMAN™"
+"neovim"
+"minetest"
+"Counter-Strike"
+"Minetest.Minetest"
+"Minetest 5.7.0 [Main Menu]"
+"Project Zomboid"
+"Project Zomboid.Project Zomboid"
+"FINAL FANTASY"
+"thorium-browser.Thorium-browser"
+"Thorium"
+"lite-xl.lite-xl"
+"Lite XL"
+"GemCraft Frostb"
+"GemCraft Chasing Shadows"
+"blender"
+"Blender"
+"inkscape"
+"qpwgraph"
+#"ranger"
+"gimp"
+"hedgewars.hedgewars"
+"hl_linux.hl_linux"
+"Half-Life"
+"Condition Zero"
 "Notepadqq"
 #"spacefm"
 "pavucontrol"
@@ -188,25 +333,68 @@ NoTitle
 "sxiv"
 "geany"
 "Geany"
-#"audacious"
-#"deadbeef"
+"reaper"
+"REAPER"
+"audacious"
+"cmus"
+"qmmp"
+"deadbeef"
+"foobar2000"
+"Strawberry"
 "fsearch"
 "ravenfield"
 "Escape From Tarkov"
+"EscapeFromTarkov"
 "TheLongDark"
 "Netherguild"
 "brave"
 "Pale Moon"
+"Mercury"
 "Waterfox"
 "LibreWolf"
-"sakura"
+#"sakura"
+"termTCT"
+"termTCB"
+"termBCT"
+"termBCB"
+"termBL"
+"termTL"
+"termBR"
+"termTR"
+"termTBL"
+"termTTL"
+"termCRB"
+"termCRT"
+"termCCT"
+"termCCB"
+"termCLB"
+"termCLT"
+"termRLT"
+"termRLB"
+"termRCT"
+"termRCB"
+"termYT0"
+"termYT1"
+"termYT2"
+"termYT3"
+"termYT4"
+"termYT5"
+"journalctl"
+"termplay"
+"multitail1"
+"multitail2"
 "icecat"
 "firefox"
 "falkon"
-#"vlc"
+"vlc"
+"mpv"
 "Unity"
 "TWM Icon Manager"
 "WorkSpaceManager"
+"virt-manager"
+"Warcraft III"
+"war3.exe.war3.exe"
+"VSCodium"
 }
 
 #---------------------------------------------------------
@@ -214,19 +402,29 @@ NoTitle
 #---------------------------------------------------------
 
 #ShowIconManager				# activate/deactivate IM
+#NoIconManagers					# If you uncomment this no Windows can be found by wmctrl etc.
 # Icon Manager Geometry:  Size:       Columns:
-IconManagerGeometry       "64x1080+0+0" 1
+IconManagerGeometry       "=1920x40-0-0" 20
+#IconManagerGeometry       "400x400-0-0" 1
 UseThreeDIconManagers
 SortIconManager				# sorts alphabetically
 #NoCaseSensitive			# sort with case?
-NoIconTitle				# don't put title under icons
-#NoIconManagers
+#NoIconTitle				# don't put title under icons
+
+#IconManagers
+#{
+#    "Sakura"  "=300x5+800+5"       5
+#    "Browsers" "400x5+100+5"  2
+#}
+
 IconManagerDontShow
 {
     "tint2"
     "rofi"
     "panel"
-} 
+	"TWM Icon Manager"
+    "WorkSpaceManager"
+}
 
 NoHighLight
 {					# optional winlist. no list = no hl
@@ -240,12 +438,9 @@ UnknownIcon      "xpm:unknown.xpm"
 ForceIcons
 Icons
 {
-  "Sakura"			"xpm:sakura.xpm"
-  "Brave"			"xpm:brave.xpm"
-  "SpaceFM"			"xpm:spacefm.xpm"
-  "Leafpad"			"xpm:leafpad.xpm"
-  "Featherpad"		"xpm:featherpad.xpm"
-  "Palemoon"		"xpm:palemoon.xpm"
+#  "Sakura"			"xpm:sakura.xpm"
+#  "SpaceFM"		"xpm:spacefm.xpm"
+#  "Palemoon"		"xpm:palemoon.xpm"
 }
 
 #---------------------------------------------------------
@@ -258,42 +453,129 @@ Borderwidth               0
 BorderShadowDepth         0
 
 NoBorder {
+"Chromium"
+"tmux-dual.URxvt"
+"tmux-quad.URxvt"
+"tmux-hex.URxvt"
+"tmux.sh"
+"Cromite"
+"Unity"
+"noB"
+"noBT"
+"Textosaurus"
+"Torchlight"
+"sir.sir"
+"SirYouAreBeingHunted"
+"PartyHardGame"
+"vlc"
+"mpv"
+"Shotcut"
+"Counter-Strike"
+"Left 4 Dead 2"
+"neovim"
+"minetest"
+"Minetest.Minetest"
+"Minetest 5.7.0 [Main Menu]"
+"hl_linux.hl_linux"
+"HitmanPro.HitmanPro"
+"HITMAN™"
+"Half-Life"
+"Project Zomboid.Project Zomboid"
+"Project Zomboid"
+"thorium-browser.Thorium-browser"
+"Thorium"
+"lite-xl.lite-xl"
+"Lite XL"
+"FINAL FANTASY"
+"qpwgraph"
+"reaper"
+"Condition Zero"
+"Blender"
+"Inkscape"
 "brave"
 "geany"
 "Pale Moon"
 "waterfox"
+"Mercury"
 "icecat"
-"firefox"
+#"firefox"
+"LibreWolf"
+"hedgewars.hedgewars"
+#"Navigator.firefox"
 "Waterfox"
 "falkon"
 "TWM Icon Manager"
 "WorkSpaceManager"
-"mpv"
-"sakura"
+"termTCT"
+"termTCB"
+"termBCT"
+"termBCB"
+"termBL"
+"termTL"
+"termBR"
+"termTR"
+"termTBL"
+"termTTL"
+"termCRB"
+"termCRT"
+"termCCT"
+"termCCB"
+"termCLB"
+"termCLT"
+"termRLT"
+"termRLB"
+"termRCT"
+"termRCB"
+"termYT0"
+"termYT1"
+"termYT2"
+"termYT3"
+"termYT4"
+"termYT5"
+"journalctl"
+"termplay"
+"Duskers"
+"N/A"
+"Counter Strike"
 "ravenfield"
+"Barony"
 "Escape From Tarkov"
+"EscapeFromTarkov"
 "Netherguild"
 "notepadqq"
 "audacious"
+"cmus"
+"qmmp"
 "deadbeef"
+"foobar2000"
+"TheLongDark"
 "qjackdctl"
+"QjackCtl"
 "pavucontrol"
+"Warcraft III"
+"war3.exe.war3.exe"
+"GemCraft Frostborn Wrath"
+"GemCraft Chasing Shadows"
+"VSCodium"
 }
 
 #---------------------------------------------------------
-# WORKSPACE MANAGER CONFIG COLORS AND NAMES                              
-# N = "Name"  |  MC = "ManagerColor"  |  MTC = "ManTextColor" 
-# BC = "BackgroundColor"  |  FC = "ForegroundColor"  |  RX = "RootXpm" 
+# WORKSPACEMANAGER CONFIG COLORS AND NAMES
+# N = "Name"  |  MC = "ManagerColor"  |  MTC = "ManTextColor"
+# BC = "BackgroundColor"  |  FC = "ForegroundColor"  |  RX = "RootXpm"
 #---------------------------------------------------------
 
-WorkSpaces 
+#ShowWorkSpaceManager
+WorkSpaceManagerGeometry        "144x24+640-0" 6
+
+WorkSpaces
 {
-#	 N          	   MC        MTC       BC        FC      RX 
-    "workspace1"    { "#FF00FF" "#BEBABE" "#121212" "white" "xpm:bg/bg-gray.xpm" }
-    "workspace2"    { "#000000" "#BEBABE" "#222600" "white" "xpm:bg/bg-olive.xpm" }
-    "workspace3"    { "#000000" "#BEBABE" "#282600" "white" "xpm:bg/yayaos.xpm" }
-    "workspace4"    { "#000000" "#BEBABE" "#FFB600" "white" "xpm:bg/bg-brown.xpm" }
-    "workspace5"    { "#000000" "#BEBABE" "#220000" "white" }
+#	 N          	   MC        MTC       BC        FC      RX
+    "workspace1"    { "#FF00FF" "#BEBABE" "#121212" "white" "xpm:$HOME/Pictures/bg/bg-gray.xpm" }
+    "workspace2"    { "#000000" "#BEBABE" "#222600" "white" "xpm:$HOME/Pictures/bg/bg-olive.xpm" }
+    "workspace3"    { "#000000" "#BEBABE" "#282600" "white" "xpm:$HOME/Pictures/bg/bg-yorange.xpm" }
+    "workspace4"    { "#000000" "#BEBABE" "#FFA600" "white" "xpm:$HOME/Pictures/bg/bg-brown.xpm" }
+    "workspace5"    { "#000000" "#BEBABE" "#220000" "white" "xpm:$HOME/Pictures/bg/bg-red.xpm" }
     "workspace6"    { "#000000" "#BEBABE" "#FFFFFF" "white" }
 }
 
@@ -304,7 +586,7 @@ WorkSpaces
 BorderResizeCursors			# resize curs on border
 
 Cursors
-{	
+{
     Destroy     "pirate"
     Frame       "top_left_arrow"
     Title       "top_left_arrow"
@@ -319,7 +601,7 @@ Cursors
 }
 
 #---------------------------------------------------------
-# MENU CONFIG and MENUS                                           
+# MENU CONFIG and MENUS
 #---------------------------------------------------------
 
 StayUpMenus				# pin automatically?
@@ -332,10 +614,11 @@ InterpolateMenuColors			# interpolate colors in multicol menus
 
 menu "Menus"
 {
-"Applications"				("#000000":"#FFB600")f.title
-"Terminal"					!"sakura&"
+"Applications"				("#000000":"#FFA600")f.title
+"URXVT"						!"urxvt&"
+"XTerm"						!"xterm&"
 ""							f.separator
-"Games"						f.menu "games"
+#"Games"						f.menu "games"
 "Documents"					f.menu "doc"
 "Development"				f.menu "dev"
 "Audio"						f.menu "audio"
@@ -347,247 +630,274 @@ menu "Menus"
 
 menu "games"
 {
-#	"0 A.D."				!"0ad&"
-#	"Anomaly"				!"/home/shed/Documents/Scripts/pillar/launchers/StartAnomaly.sh&"
-#	"Arma 3"				!"steam skip steam://rungameid/107410&"
-#	"Beyond All Reason"		!"DISPLAY=:0.0 /home/shed/Games/Beyond-All-Reason-1.1522.0.AppImage&"
-#	"Brigador"				!"/home/shed/Games/Brigador\\ Up\\ Armored\\ Edition/start.sh&"
-#	"Cataclysm: DDA"		!"sakura -x cataclysm&"
-	"COD MW 1"				!"cod1.sh&"
-	"COD MW 2"				!"cod2.sh&"
-	"COD MW 3"				!"cod3.sh&"
-	"DosBox"				!"dosbox&"
-#	"FRICK Inc."			!"DISPLAY=:0.0 /home/shed/Games/FrickInc/frickInc.x86_64&"
-#	"GemCraft - Chasing Shadows" !"steam skip steam://rungameid/296490&"
-#	"GemCraft - Frostborn Wrath" !"steam skip steam://rungameid/1106530&"
-#	"GROUND BRANCH"			!"steam skip steam://rungameid/16900&"
-#	"Hedgewars"				!"hedgewars&"
-	"Minetest"				!"minetest&"
-#	"MorroWind"				!"openmw-launcher&"
-#	"Netherguild"			("red":"blue")!"/home/shed/Games/Netherguild/Netherguild&"
-#	"Never Winter Nights 2"	("white":"#616aa1")!"/home/shed/Games/Neverwinter\\ Nights\\ 2\\ Complete/nwn2.sh&"
-#	"Oblivion"				("#FFB600":"#121212")!"env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/1&"
-#	"OSGG"					!"osgg&"
-#	"Orcs Must Die! 2"		!"steam skip steam://rungameid/201790&"
-#	"Orcs Must Die!"		!"steam skip steam://rungameid/102600&"
-#	"Pingus"				("#FFB600":"#121212")!"pingus&"
-#	"Project Zomboid"		("white":"#000012")!"/home/shed/Games/Project\\ Zomboid/start.sh&"
-#	"Quake 2"				("#FFB600":"#121212")!"/home/shed/Games/Quake\\ II/q2.sh&"
-#	"Ravenfield"			!"steam skip steam://rungameid/636480&"
-#	"ReVolt"				("white":"#460000")!"/home/shed/Games/rvgl/rvgl.64&"
-#	"SandStorm"				("#FFB600":"#121212")!"/home/shed/Scripts/pillar/launchers/StartSandstorm.sh&"
-#	"Sargosian Abyss"		("black":"red")!"/home/shed/Games/SargosianAbyss/The\\ Sargosian\\ Abyss.sh&"
-#	"Shattered Pixel Dungeon"	("#FFB600":"#121212")!"/home/shed/Games/Shattered\\ Pixel\\ Dungeon/start.sh&"
-#	"STALKER - GAMMA"		("#000000":"#607c62")!"DISPLAY=:0.0 bottles-cli run -p ModOrganizer -b 'SG'&"	
-	"Steam"					("white":"#1b2838")!"steam&"
-	"Tarkov"				("#CC00FF":"#000012")!"/home/shed/Scripts/pillar/launchers/StartTarkov.sh&"
-#	"TeeWorlds"				!"teeworlds&"
-#	"The Dark Mod"			!"/home/shed/Games/TheDarkMod/thedarkmod.x64&"
-#	"The Long Dark"			!"steam skip steam://rungameid/305620&"
-#	"Tower Of Time"			("#FFB600":"#121212")!"/home/shed/Games/Tower\\ of\\ Time/start.sh&"
-#	"Ur-Quan Masters"		!"uqm&"
-#	"Veloren"				("#FFB600":"#121212")!"/home/shed/.local/share/airshipper/airshipper&"
-	"WarCraft II"			("#FFB600":"#121212")!"/home/shed/Games/Warcraft\\ II/drive_c/GOG Games/Warcraft\\ II\\ BNE/wc2.sh&"
-	"WarCraft III"			("#FFB600":"#121212")!"/home/shed/Games/Warcraft\\ III/wc3.sh&"
-#	"Xenonauts"				("#FFB600":"#121212")!"/home/shed/Games/Xenonauts/start.sh&"
-#	"Xonotic"				("#FFB600":"#121212")!"firejail --net=none DISPLAY=:0.0 /usr/bin/xonotic-sdl&"
-#	"Zorbus"				("white":"#4b5463")!"cd /home/shed/Games/Zorbus ; DISPLAY=:0.0 wine /home/shed/Games/Zorbus/Zorbus.exe&"
+#	"0 A.D."						!"0ad&"
+#	"Anomaly"						!"$HOME/Documents/Scripts/$HOSTNAME/launchers/StartAnomaly.sh&"
+#	"Arma 3"						!"wine $HOME/.local/share/Steam/steamapps/common/Arma\\ 3/arma3_x64.exe&"
+#	"Barony"						!"$HOME/.local/share/Steam/steamapps/common/Barony/barony.x86_64&"
+#	"Betrayer"						!"DISPLAY=:0.0 bottles-cli run -p Betrayer -b 'Betrayer' -- %u"
+#	"Besiege"						!"DISPLAY=:0.0 $HOME/Documents/Scripts/$HOSTNAME/launchers/StartBesiege.sh"
+#	"Beyond All Reason"				!"DISPLAY=:0.0 $HOME/Games/Beyond-All-Reason-1.1522.0.AppImage&"
+#	"Brigador"						!"DISPLAY=:0.0 $HOME/Games/Brigador\\ Up\\ Armored\\ Edition/start.sh&"
+#	"Cataclysm: DDA"				!"sakura -x cataclysm&"
+	"COD MW 1"						!"cod1.sh&"
+	"COD MW 2"						!"cod2.sh&"
+	"COD MW 3"						!"cod3.sh&"
+#	"DCSS"							!"$HOME/Games/dcss-0.30.1-linux-tiles.x86_64.AppImage&"
+#	"Diablo III"					!"DISPLAY=:0.0 bottles-cli run -p 'Diablo III Launcher' -b 'Blizzard' -- %u"
+	"DosBox"						!"dosbox&"
+	"Duskers"						!"$HOME/.local/share/Steam/steamapps/common/Duskers/Duskers_linux.x86_64&"
+	"Final Fantasy"					!"$HOME/Documents/Scripts/$HOSTNAME/launchers/ff1.sh&"
+#	"Forts"							!"$HOME/Scripts/$HOSTNAME/launchers/StartForts.sh&"
+#	"FRICK Inc."					!"DISPLAY=:0.0 $HOME/Games/FrickInc/frickInc.x86_64&"
+	"GemCraft - Chasing Shadows"	("#888888":"#200000")!"$HOME/Documents/Scripts/$HOSTNAME/launchers/gemcraftchasingshadows.sh&"
+	"GemCraft - Frostborn Wrath"	("#888888":"#120016")!"$HOME/Documents/Scripts/$HOSTNAME/launchers/gemcraftfrostbornwrath.sh&"
+#	"GROUND BRANCH"					("#FFA600":"#121212")!"wine $HOME/.local/share/Steam/steamapps/common/Ground\\ Branch/GroundBranch.exe&"
+#	"Happy Room"					!"$HOME/Scripts/$HOSTNAME/launchers/StartHappyRoom.sh&"
+#	"Hedgewars"						!"hedgewars&"
+#	"Minetest"						!"minetest&"
+#	"Moonring"						("#FFA600":"#121212")!"wine $HOME/Games/Moonring/moonring.exe&"
+#	"MorroWind"						("#000000":"#7a602e")!"openmw-launcher&"
+	"Netherguild"					("red":"#000048")!"$HOME/.local/share/Steam/steamapps/common/Netherguild/Netherguild&"
+#	"Never Winter Nights 2"			("white":"#616aa1")!"$HOME/Games/Neverwinter\\ Nights\\ 2\\ Complete/nwn2.sh&"
+#	"Oblivion"						("#FFA600":"#121212")!"env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/1&"
+#	"OpenHV"						("#FFA600":"#121212")!"$HOME/Games/OpenHV-20230917-x86_64.AppImage&"
+#	"OSGG"							!"osgg&"
+#	"Orcs Must Die!"				!"wine $HOME/.local/share/Steam/steamapps/common/Orcs\\ Must\\ Die!/Build/release/OrcsMustDie.exe&"
+#	"Orcs Must Die! 2"				!"wine $HOME/.local/share/Steam/steamapps/common/Orcs\\ Must\\ Die\\ 2/build/release/OrcsMustDie2.exe&"
+#	"People Playground"				!"$HOME/Scripts/$HOSTNAME/launchers/StartPeopleplayground.sh&"
+#	"Pathfinder"					!"$HOME/Scripts/$HOSTNAME/launchers/StartPathfinder.sh&"
+#	"Perfect Heist 2"				!"$HOME/Scripts/$HOSTNAME/launchers/StartPerfectHeist2.sh&"
+#	"Pingus"						("#FFA600":"#121212")!"pingus&"
+#	"Project Zomboid"				("white":"#000012")!"$HOME/Games/Project\\ Zomboid/start.sh&"
+#	"Quake 2"						("#FFA600":"#121212")!"$HOME/Games/Quake\\ II/q2.sh&"
+	"Ravenfield"					("#FFA600":"#121212")!"$HOME/.local/share/Steam/steamapps/common/Ravenfield/ravenfield.x86_64 -nointro&"
+#	"ReVolt"						("white":"#460000")!"$HOME/Games/rvgl/rvgl.64&"
+#	"SandStorm"						("#FFA600":"#121212")!"$HOME/Scripts/$HOSTNAME/launchers/StartSandstorm.sh&"
+#	"Sargosian Abyss"				("black":"red")!"$HOME/Games/SargosianAbyss/The\\ Sargosian\\ Abyss.sh&"
+#	"Scorched Earth"				!"dosbox $HOME/Games/SC/SCORCH.EXE&" #Game runs fucked up?
+#	"Shattered Pixel Dungeon"		("#FFA600":"#121212")!"$HOME/Games/Shattered\\ Pixel\\ Dungeon/start.sh&"
+#	"Sniper Ghost Warrior 3"		!"env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/10&"
+#	"STALKER - GAMMA"				("#000000":"#607c62")!"DISPLAY=:0.0 bottles-cli run -p ModOrganizer -b 'SG'&"
+#	"StarCitizen"					("#FFA600":"#121212")!"bottles-cli run -p 'RSI Launcher' -b 'StarCitizen' -- %u&"
+#	"StarCraft II"					("#FFA600":"#121212")!"DISPLAY=:0.0 bottles-cli run -p 'StarCraft II' -b 'Blizzard' -- %u"
+	"Steam"							("white":"#1b2838")!"steam sol&"
+#	"Stone Shard"					!"$HOME/Scripts/$HOSTNAME/launchers/StartStoneShard.sh&"
+#	"SurrounDead"					!"$HOME/Scripts/$HOSTNAME/launchers/SurrounDead.sh&"
+	"Tarkov"						("#CC00FF":"#000012")!"tarkov&"
+#	"TeeWorlds"						!"teeworlds&"
+#	"Tear Down"						("#FFA600":"#121212")!"$HOME/Scripts/$HOSTNAME/launchers/StartTearDown.sh&"
+#	"The Dark Mod"					!"$HOME/Games/TheDarkMod/thedarkmod.x64&"
+	"The Long Dark"					!"$HOME/.local/share/Steam/steamapps/common/TheLongDark/tld.x86_64&"
+#	"Torchlight I"					!"wine $HOME/.local/share/Steam/steamapps/common/Torchlight/Torchlight.exe&"
+#	"Torchlight II"					!"LD_PRELOAD=$HOME/.local/share/Steam/ubuntu12_32/steam-runtime/usr/lib/x86_64-linux-gnu/libfontconfig.so.1 $HOME/.local/share/Steam/steamapps/common/Torchlight\\ II/ModLauncher.bin.x86_64&"
+#	"Tower Of Time"					("#FFA600":"#121212")!"$HOME/Games/Tower\\ of\\ Time/start.sh&"
+#	"Ur-Quan Masters"				!"uqm&"
+#	"Veloren"						("#FFA600":"#121212")!"$HOME/.local/share/airshipper/airshipper&"
+	"WarCraft II"					("#FFA600":"#121212")!"$HOME/Scripts/$HOSTNAME/launchers/wc2.sh&"
+	"WarCraft III"					("#FFA600":"#121212")!"$HOME/Games/Warcraft\\ III/wc3.sh&"
+#	"Xenonauts"						("#FFA600":"#121212")!"$HOME/Games/Xenonauts/start.sh&"
+#	"Xonotic"						("#FFA600":"#121212")!"firejail --net=none DISPLAY=:0.0 /usr/bin/xonotic-sdl&"
+#	"Zorbus"						("white":"#4b5463")!"cd $HOME/Games/Zorbus ; DISPLAY=:0.0 wine $HOME/Games/Zorbus/Zorbus.exe&"
 }
 
 menu "utils"
 {
 	"Color Picker"			!"gcolor3&"
 	"Calculator"			!"galculator&"
-	"MELD"					!"meld&"
-	"Roccat"				!"roccatkonextdopticalconfig&"
-	"RegEx Testing"			!"/usr/bin/com.github.artemanufrij.regextester&"
-	"PeaZip"				!"peazip&"
-	"SpaceFM"				!"spacefm&"
-	"PCmanFM"				!"pcmanfm&"
-	"4Pane"					!"4Pane&"
-	"Leafpad"				!"leafpad&"
-	"Featherpad"			!"featherpad&"	
-	"NeoVIM"				!"nvim %F&"
+	#"eDex"					!"/opt/edex-ui/eDEX-UI.AppImage&"
 	"Keepassxc"				!"keepassxc&"
-	"eDex"					!"/opt/edex-ui/eDEX-UI.AppImage&"
+	"MELD"					!"meld&"
+	"PCmanFM"				!"pcmanfm&"
+	"Ranger"				!"$HOME/Scripts/$HOSTNAME/launchers/ranger.sh&"
+#	"RegEx Testing"			!"/usr/bin/com.github.artemanufrij.regextester&"
+	"Roccat"				!"roccatkonextdopticalconfig&"
+	"Sakura"				!"sakura --config-file $HOSTNAME -i $HOME/.local/share/icons/m0dw3rks/apps/128/sakura.png&"
+	"SpaceFM"				!"spacefm&"
+	"URXVT"					!"urxvt&"
+	"QTextPad"				!"qtextpad&"
 }
 
 menu "CTWM"
 {
-"Animation"					f.menu "Anim"
+#"Animation"					f.menu "Anim"
 "Restart"					f.twmrc
 ""							f.separator
-"Quit"					f.quit
+"Quit"						f.quit
+"Logout"					!"nohup $HOME/Scripts/$HOSTNAME/session/close.sh logout&"
 }
 
 menu "doc"
 {
-	"Libre Office"			!"libreoffice&"
-	"Leafpad"				!"leafpad&"
-	"KLogg"					!"klogg&"
-#	"FBReader"				!"FBReader&"
-#	"Foliate"				!"foliate&"
 	"CoolReader"			!"cr3&"
-	"NeoVIM"				!"nvim %F&"
-	"Geany"					!"geany.sh&"
+	"VSCodium"				!"vscodium&"
+"QTextPad"				!"qtextpad&"
 }
 
 menu "dev"
 {
-	"Geany"					!"geany.sh&"
-	"Godot"					!"godot&"
-	"NeoVIM"				!"nvim %F&"
-	"Unity"					!"unity&"
-	"SimulIDE"				!"simulide&"
-	"ArduinoIDE"			!"/home/shed/.local/share/bin/arduino-ide_2.0.0_Linux_64bit.AppImage&"
+#	"Unity"					!"unity&"
+	"VSCodium"				!"vscodium&"
 }
 
 menu "system"
 {
-	"Baobab"				!"env GTK_THEME=Adwaita:dark baobab&"
-#	"Shredder"				!"rmlint --gui&"
-	"Stacer"				!"Stacer-1.1.0-x64.AppImage&"	
-	"Mime-Editor"			!"env GTK_THEME=Adwaita:dark baobab&"	
-	"VirtualBox"			!"VirtualBox&"
-	"gnome-system-monitor"	!"GTK_THEME=Adwaita:dark gnome-system-monitor&"
-	"system-monitoring-center"			!"GTK_THEME=Adwaita:dark system-monitoring-center&"
-	"HTop"					!"sakura -e htop&"
-	"BTop"					!"sakura -e btop&"
-	"Glances"				!"sakura -e glances&"	
-	"Roccat"				!"roccatkonextdopticalconfig&"
-	"GWE"					!"/usr/bin/gwe %U&"
+	"Baobab"				!"env GTK_THEME=Graphite-yellow-Dark-compact baobab&"
+	"BTop"					!"urxvt -e btop&"
 	"Configs"				f.menu "configs"
+	"gnome-system-monitor"	!"GTK_THEME=Graphite-yellow-Dark-compact gnome-system-monitor&"
+	"HTop"					!"urxvt -e htop&"
+	"Ranger"				!"$HOME/Scripts/$HOSTNAME/launchers/ranger.sh&"
+	"Roccat"				!"roccatkonextdopticalconfig&"
+	"Sakura"				!"sakura --config-file $HOSTNAME -i $HOME/.local/share/icons/m0dw3rks/apps/128/sakura.png&"
+	"URXVT"					!"urxvt&"
+	"Virt-Manager"			!"Virt-manager.sh&"
 }
 
 menu "audio"
 {
-	"Audacious"				!"audacious&"
-	"Qmmp"					!"qmmp&"
 	"DeaDBeeF"				!"deadbeef&"
-#	"FooBar2000"			!"env WINEPREFIX=\"/home/shed/.wine\" wine /home/shed/.wine/dosdevices/c:/Program\\ Files\\ \\(x86\\)/foobar2000/foobar2000.exe&"
+	"MPV"					!"mpv&"
+	"qmmp"					!"qmmp&"
 	"Reaper"				!"reaper&"
 	"Sound Converter"		!"soundconverter&"
+	"VLC"					!"vlc&"
 }
 
 menu "video-image"
 {
-	"Color Picker"			!"gcolor3&"
-	"VLC"					!"vlc&"
-	"MPV"					!"mpv&"
-#	"KDEnlive"				!"kdenlive&"
 	"Blender"				!"blender&"
-	"Inkscape"				!"inkscape&"
+#	"Color Picker"			!"gcolor3&"
 	"GIMP"					!"gimp&"
+	"Inkscape"				!"inkscape&"
+#	"KDEnlive"				!"kdenlive&"
+	"MPV"					!"mpv&"
+#	"OBS"					!"obs-studio&"
+	"ShotCut"				!"$HOME/.local/share/bin/shotcut-linux-x86_64-240128.AppImage&"
+	"VLC"					!"vlc&"
 }
 
 menu "network"
 {
 	"Network Connection"	!"nm-connection-editor&"
-	"Barrier"				!"barrier&"
-#	"Brave 0.0"				!"brave.sh&"
-#	"Brave 0.1"				!"brave.sh secondary&"
-#	"Falkon 0.0"			!"falkon&"
-	"WaterFox 0.0"			!"waterfox.sh&"
-#	"Librewolf 0.0"			!"librewolf.sh&"
-	"FFUB"					!"firefox&"	
-	"Palemoon 0.1"			!"palemoon.sh&"
-	"IceCat 0.1"			!"icecat.sh&"	
+"Desk-Flow"				!"desk-flow&"
+	"WaterFox"				!"waterfox.sh&"
+	"Thorium"				!"thorium.sh&"
+	"Tor-Browser"			!"tor.sh 0&"
 }
 
 menu "configs"
 {
-	"All Configs NPQQ"			!"notepadqq .ctwmrc .xinitrc .bashrc .env .bash_aliases .bash_profile .conkyrc .Xmodmap .Xdefaults .xbindkeysrc .imwheelrc /home/shed/.config/picom.conf /home/shed/.config/mimeapps.list&"
-	"All Configs FP"			!"featherpad .ctwmrc .xinitrc .bashrc .env .bash_aliases .bash_profile .conkyrc .Xmodmap .Xdefaults .xbindkeysrc .imwheelrc /home/shed/.config/picom.conf /home/shed/.config/mimeapps.list&"
+	"All Configs Textosaurus"			!"textosaurus -n .ctwmrc .xinitrc .bashrc .env .bash_aliases .bash_profile .conkyrc .Xmodmap .Xdefaults .xbindkeysrc .imwheelrc $HOME/.config/picom.conf $HOME/.config/mimeapps.list&"
 
 
 	""            			f.separator
-	".ctwmrc"				!"notepadqq .ctwmrc&"
-	".xinitrc"				!"notepadqq .xinitrc&"
-	".bashrc"				!"notepadqq .bashrc&"
-	".env"					!"notepadqq .env&"
-	".bash_aliases"			!"notepadqq .bash_aliases&"
-	".bash_profile"			!"notepadqq .bash_profile&"
-	".conkyrc"				!"notepadqq .conkyrc&"
-	".Xmodmap"				!"notepadqq .Xmodmap&"
-	".Xdefaults | .Xresources"				!"notepadqq .Xdefaults&"
-	".xbindkeysrc"			!"notepadqq .xbindkeysrc&"
-	".imwheelrc"			!"notepadqq .imwheelrc&"
-	"Session Start"			!"notepadqq /home/shed/Documents/Scripts/pillar/session_start.sh&"
+	".ctwmrc"				!"gedit .ctwmrc&"
+	".xinitrc"				!"gedit .xinitrc&"
+	".bashrc"				!"gedit .bashrc&"
+	".env"					!"gedit .env&"
+	".bash_aliases"			!"gedit .bash_aliases&"
+	".bash_profile"			!"gedit .bash_profile&"
+	".conkyrc"				!"gedit .conkyrc&"
+	".Xmodmap"				!"gedit .Xmodmap&"
+	".Xdefaults | .Xresources"				!"gedit .Xdefaults&"
+	".xbindkeysrc"			!"gedit .xbindkeysrc&"
+	".imwheelrc"			!"gedit .imwheelrc&"
+	"Session Start"			!"gedit $HOME/Scripts/$HOSTNAME/session_start.sh&"
 	"CTWM"					f.menu "CTWM"
 }
 
 #---------------------------------------------------------
-# WM DISPLAY CONFIGURATION                              
+# WM DISPLAY CONFIGURATION
 #---------------------------------------------------------
 
 ForceFocus
 {
+"explorer.exe.explorer.exe"
+"Default - Wine desktop"
+"IWD2EE"
+"iwd2.exe.iwd2.exe"
+"tld.x86_64.tld.x86_64"
+"TheLongDark"
+"Icewind Dale II"
+"partyhardgame.exe.partyhardgame.exe"
+"PartyHardGame"
 "GemCraft Frostborn Wrath"
+"Project Zomboid"
 "Escape From Tarkov"
+"EscapeFromTarkov"
+"escapefromtarkov.exe.escapefromtarkov.exe"
+"sc2_x64.exe.sc2_x64.exe"
+"Arma3_x64.exe"
+"Arma3"
+"Moonring"
+"steam_app_107410.steam_app_107410"
 "AnomalyDX11"
-"Call of Duty 4"
-"Call of Duty┬«: Modern Warfare┬« 3"
-"Modern Warfare"
-"Modern Warfare 1"
-"Modern Warfare 2"
-"Modern Warfare 3"
 "foobar2000"
 "SPT-AKI R7"
 "SPT AKI"
 "YAD"
-}
-
-OccupyAll 
-{
-    "TWM Icon Manager"
-    "WorkSpaceManager"
-    "tint2"
-    "panel"
+"panel"
 }
 
 AlwaysOnTop
 {
 #     "vlc"
 #     "VLC media player"
-	"trayer"
-	"panel"
+#	"trayer"
+#	"panel"
 	"TWM Icon Manager"
 	"WorkSpaceManager"
-	"tint2"
+#	"tint2"
+#	"Conky"
 }
 
-OnTopPriority 0 {
-#"librewolf"
-#"Waterfox"
+OnTopPriority 1
+{
+	"panel"
+}
+
+OnTopPriority -8
+{
+"Conky"
+"conky"
+"Trayer"
+"trayer"
 }
 
 
 Occupy # always move this app. to the same workspace?
 {
-#          Window          "librewolf"   {"workspace1"}
-#          Window          "waterfox"   {"workspace1"}
-#          Window          "Falkon"   {"workspace2"}
-#          Window          "brave"   {"workspace1"}
-#          Window          "palemoon"   {"workspace1"}
-#          Window          "geany"   {"workspace1"}
-#          Window          "conky"   {"workspace1"}
-#          Window          "Conky"   {"workspace1"}
-#          Window          "conky-x86_64.AppImage"   {"workspace1"}
-#          Window          "Steam"   {"workspace4"}
-#          Window          "keepassxc"   {"workspace2"}
-          Window          "audacious"   {"workspace2"}
-          Window          "qmmp"   {"workspace2"}
-          Window          "deadbeef"   {"workspace2"}
-          Window          "foobar2000"   {"workspace2"}
-          Window          "fsearch"   {"workspace3"}
-          Window          "VirtualBox"   {"workspace4"}
-          Window          "barrier"   {"workspace4"}
-          Window          "pavucontrol"   {"workspace2"}
-          Window          "qjackctl"   {"workspace2"}
+          Window          "corectrl"					{"workspace3"}
+          Window          "waterfox"					{"workspace1"}
+          Window          "cromite"					{"workspace1"}
+          Window          "palemoon"   					{"workspace1"}
+          Window          "geany"   					{"workspace1"}
+          Window          "Steam"						{"workspace1"}
+#          Window          "keepassxc"					{"workspace2"}
+#          Window          "audacious"					{"workspace2"}
+          Window          "qpwgraph"					{"workspace2"}
+#          Window          "qmmp"						{"workspace2"}
+#          Window          "deadbeef"					{"workspace2"}
+          Window          "foobar2000"					{"workspace2"}
+#          Window          "fsearch"						{"workspace3"}
+          Window          "VirtualBox"					{"workspace4"}
+          Window          "Virt-manager"				{"workspace4"}
+          Window          "barrier"						{"workspace4"}
+          Window          "deskflow"						{"workspace4"}
+          Window          "pavucontrol"					{"workspace2"}
+          Window          "qjackctl"					{"workspace2"}
+#          Window          "spacefm"						{"workspace2"}
+#          Window          "spacefm.Spacefm"				{"workspace2"}
+          Window          "termYT0"						{"workspace2"}
+          Window          "termYT1"						{"workspace2"}
+          Window          "termYT2"						{"workspace2"}
+          Window          "termYT3"						{"workspace2"}
+          Window          "termYT4"						{"workspace2"}
+          Window          "termYT5"						{"workspace2"}
 }
 
 WindowRing 			# which windows to use when warping
-#{					# if you don't list any windows  
+#{					# if you don't list any windows
 #}
 
 WindowRingExclude			# Don't include these windows i warp
@@ -602,10 +912,10 @@ WindowRingExclude			# Don't include these windows i warp
 DontWarpCursorInWMap
 
 #---------------------------------------------------------
-# FUNCTION DEFINITIONS                                   
+# FUNCTION DEFINITIONS
 #---------------------------------------------------------
 
-Function "raise-move"           { f.deltastop f.forcemove f.raise } #f.focus 
+Function "raise-move"           { f.deltastop f.raise f.focus f.focus f.move } #f.forcemove
 Function "raise-and-resize"		{ f.deltastop f.raise f.resize }
 Function "ws-move-vanish1"		{ f.toggleoccupation "workspace1" f.vanish }
 Function "ws-move-vanish2"		{ f.toggleoccupation "workspace2" f.vanish }
@@ -616,14 +926,18 @@ Function "ws-move-vanish6"		{ f.toggleoccupation "workspace6" f.vanish }
 
 #---------------------------------------------------------
 # MOUSE BUTTON FUNCTIONS
-# BUTTONS	: CONTEXT	: FUNCTION            
+# BUTTONS	: CONTEXT	: FUNCTION
 #---------------------------------------------------------
 "0xff67"	=		: all		: f.menu "Menus" # Show menu from keyboard menu key
-Button1		= mod3	: w			: f.move # Tab + m1 Click to move window in incremeneted steps defined by XMoveGrid X YMoveGrid X
+#Button1	=		: root		: f.menu "Menus" # Show menu when clicking x root
+Button1		= mod3	: w			: f.move # Capslock + m1 Click to move window in incremeneted steps defined by XMoveGrid X YMoveGrid X
+#Button1		= m	: w			: f.move # modded /usr/share/X11/xkb/symbols/pc to change caps to alt but despite it being set to Alt_R is triggers with _L so it messes with Blender
 Button1		= mod4	: w			: f.function "raise-and-resize" #win + button1 because alt is used by blender
 Button1		=		: frame		: f.resize
-Button1		=		: t		: f.function "raise-move" # M1 Click and hold title for move
+Button1		=		: t			: f.function "raise-move" # M1 Click and hold title for move
 Button1		= s		: title		: f.movetitlebar # BeOS style title drag
+Button1		= c|m|s	: w			: f.identify # Show Ident info for things like no border/title force focus etc
+
 
 #---------------------------------------------------------
 # KEY FUNCTIONS
@@ -648,25 +962,31 @@ Button1		= s		: title		: f.movetitlebar # BeOS style title drag
 "6" = c|s : w : f.function "ws-move-vanish6"
 "0" = c|s : w : f.occupy
 
-"0xff61"		= mod3		: all        	: !"/home/shed/Documents/Scripts/pillar/screenshot.sh sa&"
-"0xff61"		= c			: all			: !"/home/shed/Documents/Scripts/pillar/screenshot.sh&"
-"0xff61"		= c|mod4	: all			: !"/home/shed/Documents/Scripts/pillar/screenshot.sh sw&"
-"E"				= mod4 		: all			: !"/home/shed/Scripts/pillar/xy_launch.sh e &"
-"Delete"     	= c|m 		: all			: !"/home/shed/Documents/Scripts/pillar/launchers/cad.sh smc &"
-"R"				= mod4		: all			: !"launcher&"
-"0x20"			= mod4		: all			: !"/home/shed/Scripts/pillar/space_runner.sh run&"
-"R"				= mod4		: all			: !"/home/shed/Scripts/pillar/space_runner.sh run&"
-"L"				= mod4		: all			: !"/home/shed/Scripts/pillar/scrlk.sh&"
-"0x2e"			= mod4		: all			: !"/home/shed/Scripts/pillar/scrlk.sh eod&"
-"T"				= c|m 		: all			: !"/home/shed/Scripts/pillar/xy_launch.sh t&"
-"M"				= c|m		: all			: !"/home/shed/Scripts/pillar/xy_launch.sh m&"
-"W"				= mod4		: all			: !"rofi -show window&"
+"0xff61"		= m		: all        	: !"$HOME/Scripts/$HOSTNAME/screenshot.sh sa&"
+"0xff61"		= c			: all			: !"$HOME/Scripts/$HOSTNAME/screenshot.sh&"
+"0xff61"		= c|mod4	: all			: !"$HOME/Scripts/$HOSTNAME/screenshot.sh sw&"
+"Delete"     	= c|m 		: all			: !"$HOME/Scripts/$HOSTNAME/launchers/cad.sh ht&"
+"0x20"			= mod4		: all			: !"$HOME/Scripts/$HOSTNAME/launchers/rofi.sh run&"
+"L"				= mod4		: all			: !"$HOME/Scripts/$HOSTNAME/session/scrlk.sh&"
+"0x2e"			= mod4		: all			: !"$HOME/Scripts/$HOSTNAME/session/scrlk.sh eod&"
+#"S"				= mod4 		: all			: !"$HOME/Scripts/$HOSTNAME/launchers/xy_launch.sh e &"
+#"R"				= mod4 		: all			: !"$HOME/Scripts/$HOSTNAME/launchers/ranger.sh&"
+"T"				= c|m 		: all			: !"$HOME/Scripts/$HOSTNAME/launchers/xy_launch.sh t&"
+"M"				= c|m		: all			: !"$HOME/Scripts/$HOSTNAME/launchers/xy_launch.sh m&"
+"W"				= mod4		: all			: !"$HOME/Scripts/$HOSTNAME/launchers/rofi.sh winlist&"
+#"W"				= mod4		: all			: !"$HOME/Scripts/$HOSTNAME/session/window_list.sh&"
+#"W"				= mod4		: all			: !"rofi -sort -sorting-method fzf -show windowcd&"
+#"W"				= mod4		: all			: !"$HOME/Scripts/$HOSTNAME/session/window_list.sh&"
 "D"				= mod4		: all			: f.showbackground
 "0xff1b"		= c			: w				: f.deleteordestroy # close window
-"V"				= c|s		: all			: !"clipmenu&"
+"V"				= mod4		: all			: !"$HOME/Scripts/$HOSTNAME/launchers/rofi.sh clipboard&"
+
 "F9"			= m | c | s : all			: f.restart
-"Tab"			= m			: all			: f.warpring "next"
-"Tab"			= m|s		: all			: f.warpring "prev"
+
+# alt-tab
+#"Tab"			= m			: all			: f.warpring "next"
+#"Tab"			= m|s		: all			: f.warpring "prev"
+#"Tab"				= m			: all			: !"$HOME/Scripts/$HOSTNAME/launchers/rofi.sh winlist&"
 
 "Right"			= mod4		: w				: f.jumpright "1"
 "Left"			= mod4		: w				: f.jumpleft "1"
@@ -678,35 +998,42 @@ Button1		= s		: title		: f.movetitlebar # BeOS style title drag
 "Up"			= c			: w				: f.topzoom
 "Down"			= c			: w				: f.bottomzoom
 
-#"Right"			= c			: w				: !"/home/shed/Scripts/pillar/maximize.sh right&"
-#"Left"			= c			: w				: !"/home/shed/Scripts/pillar/maximize.sh left&"
-#"Up"			= c			: w				: !"/home/shed/Scripts/pillar/maximize.sh top&"
-#"Down"			= c			: w				: !"/home/shed/Scripts/pillar/maximize.sh bottom&"
+"F1"			= m|s		: all 			: !"$HOME/Scripts/$HOSTNAME/session/maximize.sh small | tee -a /tmp/logs/session.log&"
+"F2"			= m|s		: all 			: !"$HOME/Scripts/$HOSTNAME/session/maximize.sh large | tee -a /tmp/logs/session.log&"
+"F3"			= m|s		: all 			: !"$HOME/Scripts/$HOSTNAME/session/maximize.sh tsr | tee -a /tmp/logs/session.log&"
 
-"F1"			= m|s		: all 			: !"/home/shed/Scripts/pillar/maximize.sh small&"
-"F2"			= m|s		: all 			: !"/home/shed/Scripts/pillar/maximize.sh large&"
-"F3"			= m|s		: all 			: !"/home/shed/Scripts/pillar/maximize.sh tsr&"
+#"F"				= m			: w 			: !"$HOME/Scripts/$HOSTNAME/session/maximize.sh full&"
 #"F11"			=			: w 			: f.xfullscreenzoom
-#"F"				= m			: w 			: !"/home/shed/Scripts/pillar/maximize.sh full&"
 "F"				= m			: w 			: f.xfullscreenzoom
-"B"				= m			: w 			: f.raiselower
-#"X"				= m			: w 			: !"/home/shed/Scripts/pillar/maximize.sh max&"
-"X"				= m			: w 			: f.fullscreenzoom
-"C"				= m			: w 			: !"/home/shed/Scripts/pillar/maximize.sh cust&"
+#"B"				= m			: w 			: f.raiselower
+"X"				= m			: w 			: f.fullzoom
+#"X"				= m			: w 			: !"$HOME/Scripts/$HOSTNAME/session/maximize.sh max 2>&1 | tee -a /tmp/logs/session.log&"
+#C was cust
+"C"				= m			: w 			: !"$HOME/Scripts/$HOSTNAME/session/maximize.sh cust 2>&1 | tee -a /tmp/logs/session.log&"
+"0"				= m			: w 			: !"$HOME/Scripts/$HOSTNAME/session/maximize.sh setUpDef 2>&1 | tee -a /tmp/logs/session.log&"
+"="				= m			: w 			: !"$HOME/Scripts/$HOSTNAME/session/maximize.sh setUpCust 2>&1 | tee -a /tmp/logs/session.log&"
 "X"				= mod4		: w 			: f.raiselower
 "F12"			= c			: all   		: f.fullzoom
-"F10"			= mod4		: "sakura" 		: f.raise
-#"F11"			= mod4		: "urxvt" 		: f.raise
-"F10"			=			: w 			: !"/home/shed/Scripts/pillar/aot.sh&"
-"Caps_Lock"		= 			: all			: !"/home/shed/Scripts/pillar/keymodmap.sh&"
 
-#SloppyFocus
+"T"				= mod4		: all 		: !"$HOME/Scripts/$HOSTNAME/session/winclassraise.sh terms group&"
+"B"				= mod4		: all 		: !"$HOME/Scripts/$HOSTNAME/session/winclassraise.sh browsers group&"
+"E"				= mod4		: all 		: !"$HOME/Scripts/$HOSTNAME/session/winclassraise.sh editors group&"
+"M"				= mod4		: all 		: !"$HOME/Scripts/$HOSTNAME/session/winclassraise.sh media group&"
+"F10"			=			: w 			: !"$HOME/Scripts/$HOSTNAME/session/aot.sh&"
+
+#"Caps_Lock"		= 			: all			: !"$HOME/Scripts/$HOSTNAME/session/keymodmap.sh&"
+
+AutoRaise {
+#"ranger"
+#"ranger.URxvt"
+#"URxvt"
+}
+RaiseDelay 10
+SloppyFocus
 ClickToFocus            # Prevent mouse movement changing focus
 RaiseOnClick            # Window rises when clicked
 RaiseOnClickButton 1    # When clicked with button 1, that is.
-UsePPosition			"on"		# Help kbd instantiated windows get focus # let the apps have their way?
 
-RandomPlacement			"on" "+1920+0"		# ask for pos? # Help kbd instantiated windows get focus
 SaveWorkspaceFocus      # Obviously workspace focus should be retained
 
 IgnoreCaseInMenuSelection # Make menus much easier via keyboard
