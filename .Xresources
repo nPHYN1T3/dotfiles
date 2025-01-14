@@ -1,29 +1,67 @@
-*background:  #080808
-*cursorColor:  #ffb600
-*foreground:  #cccccc
-*color0:  #000000
-*color1:  #cc0000
-*color2:  #00aa00
-*color3:  #ccaa00
-*color4:  #0000dc
-*color5:  #cc00bb
-*color6:  #00aabb
-*color7:  #e5c3d4
-*color8:  #7f5d6e
-*color9:  #fe0000
-*color10:  #00dc00
-*color11:  #fedc00
-*color12:  #5b39ed
-*color13:  #fe00ed
-*color14:  #00dced
-*color15:  #fedced
+##### THIS FILE IS BEING CURRENTLY MANAGED BY URXVTCONFIG #####
+##### CHANGES DONE TO THIS FILE MANUALLY MAY AFFECT THE FUNCTIONALITY ######
+##### PROCEED WITH CAUTION! #####
 
-Sxiv.background: #080808
-Sxiv.foreground: #888888
+! special colors
+*.foreground:  #A0A0A0
+*.background:  #121212
+*.cursorColor:  #ffa800
+! black
+*.color0:      #000000
+*.color8:      #040404
+! red
+*.color1:      #ff0000
+*.color9:      #550000
+! green
+*.color2:      #00ff00
+*.color10:     #007f00
+! yellow
+*.color3:      #ffff00
+*.color11:     #565600
+! blue
+*.color4:      #8888ff
+*.color12:     #80807f
+! magenta
+*.color5:      #ff00ff
+*.color13:     #ff007f
+! cyan
+*.color6:      #00aaff
+*.color14:     #004568
+! white
+*.color7:      #ffffff
+*.color15:     #878787
 
-Xcursor.theme: "Future Cursors"
-Xcursor.size: 32
+URxvt.urlLauncher: /home/shed/Scripts/pillar/launchers/cromite.sh
+URxvt*scrollBar:         false
+URxvt*scrollBar_right:   false
+URxvt*inheritPixmap:  true
+URxvt*transparent: true
+URxvt*shading:  40
+URxvt.iconFile: "/home/shed/.local/share/icons/m0dw3rks/apps/scalable/urxvt.svg"
+URxvt.iconName: urxvt
+!URxvt*title: URXVT
+URxvt*font: xft:Hack Nerd Font Mono:pixelsize=16
+URxvt*letterSpace: 0
+URxvt*antialias:  true
+URxvt*autohint: true
+URxvt*perl-ext-common: default,matcher
+URxvt*url-launcher: waterfox
+!URxvt.keysym.Control-Shift-V: eval:paste_clipboard
+!URxvt.perl-ext-common: default,ctrl_v_paste
+!Restore Ctrl+Shift+(c|v)
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.perl-ext-common: default,-confirm-paste
+URxvt*matcher.button: 1
+URxvt.saveLines: 4096
 
-xpdf*reverseVideo
-xpdf*Foreground: #888000
-xpdf*Background: #080808
+Xcursor.theme: Bibata-Original-Amber
+Xcursor.size: 16
+
+XTerm.vt100.locale: false
+XTerm.vt100.utf8: true
+XTerm.vt100.selectToClipboard: true
+XTerm.vt100.geometry: 80x28
+XTerm*font: xft:Hack Nerd Font Mono:pixelsize=16

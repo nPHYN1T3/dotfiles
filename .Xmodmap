@@ -6,6 +6,7 @@
 !0xffea 108 altgr
 !0xffeb 133 Super_L
 
+! Set in not working /usr/share/X11/xkb/keycodes/evdev
 keycode 66 = Caps_Lock
 keycode 108 = Alt_R
 
